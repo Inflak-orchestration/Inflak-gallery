@@ -40,6 +40,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .gallery-header nav { display: flex; align-items: center; gap: 5px; }
 .gallery-header nav a { border-radius: 6px; color: var(--muted); padding: 8px 11px; font-size: 13px; font-weight: 600; text-decoration: none; }
 .gallery-header nav a:hover, .gallery-header nav a.active { background: #e8e5de; color: var(--ink); }
+.gallery-header nav .github-link { display: inline-flex; align-items: center; gap: 6px; }
+.github-link svg { width: 16px; height: 16px; }
 
 main { width: min(1500px, 100%); margin: 0 auto; padding: 0 clamp(20px, 4vw, 64px) 70px; }
 .gallery-intro { display: flex; min-height: 210px; align-items: end; justify-content: space-between; gap: 30px; border-bottom: 1px solid var(--ink); padding: 56px 0 26px; }
