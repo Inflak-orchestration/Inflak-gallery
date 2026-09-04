@@ -1,6 +1,10 @@
+import json
+import tempfile
 import unittest
+from pathlib import Path
 
 import app
+import build_pages
 
 
 class GalleryDataTests(unittest.TestCase):
@@ -29,6 +33,26 @@ class GalleryDataTests(unittest.TestCase):
     def test_cover_times_are_frozen_to_reviewed_frames(self):
         expected = [10, 3, 7, 10, 22, 7, 17, 5, 16, 20, 13, 9, 3, 6, 33]
         self.assertEqual([item["coverTimeSeconds"] for item in app._catalog()["cases"]], expected)
+
+
+    def test_pages_build_uses_static_relative_assets(self):
+        with tempfile.TemporaryDirectory() as directory:
+            output_dir = Path(directory) / "site"
+            build_pages.build(output_dir)
+
+            html = (output_dir / "index.html").read_text(encoding="utf-8")
+            javascript = (output_dir / "gallery.js").read_text(encoding="utf-8")
+            catalog = json.loads((output_dir / "data" / "catalog.json").read_text(encoding="utf-8"))
+
+            self.assertIn('href="./gallery.css?v=20260902"', html)
+            self.assertIn('src="./assets/inflak-logo.png"', html)
+            self.assertIn('fetch("./data/catalog.json")', javascript)
+            self.assertNotIn("/api/gallery/cases", javascript)
+            for item in catalog["cases"]:
+                self.assertTrue(item["videoUrl"].startswith("./data/gallery_cases/"))
+                self.assertTrue(item["historyUrl"].startswith("./data/gallery_cases/"))
+                self.assertTrue((output_dir / item["videoUrl"]).is_file())
+                self.assertTrue((output_dir / item["historyUrl"]).is_file())
 
 
 if __name__ == "__main__":
