@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "1.0",
+  "caseId": "inflak-pN3-sketch-layout",
+  "runId": "1b71ade5820442f28a97a101ef4da890",
+  "sessionId": "e42ef170-699b-4ba6-bb8e-82b18410f91a",
+  "pluginId": "inflak-pN3-sketch-layout",
+  "model": "gpt-5.5",
+  "startedAt": "2026-08-23T07:26:05.478383+00:00",
+  "storagePath": "data/gallery_cases/inflak-pN3-sketch-grounded-layout/1b71ade5820442f28a97a101ef4da890",
+  "skillTraceFile": "skill-trace.jsonl"
+}

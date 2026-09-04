@@ -1,0 +1,1364 @@
+{
+  "cases": [
+    {
+      "caseId": "inflak-main",
+      "order": 0,
+      "title": "InFlak Main",
+      "focus": "Core system",
+      "description": "This recorded system case moves from a structured story brief to cover generation and image restyling, using forms and before-after review to keep the user in control.",
+      "kind": "system",
+      "coverTimeSeconds": 10,
+      "artifactSubstrates": [
+        "Text",
+        "Image (Raster)"
+      ],
+      "interactionRealizations": [
+        "Structured Input",
+        "Artifact Review"
+      ],
+      "videoUrl": "/api/gallery/cases/inflak-main/video",
+      "historyUrl": "/api/gallery/cases/inflak-main/runs/17d5b3a920f54501b6895275dd7e572a/history",
+      "run": {
+        "schemaVersion": "1.0",
+        "caseId": "inflak-main",
+        "runId": "17d5b3a920f54501b6895275dd7e572a",
+        "sessionId": "675c04b5-94d1-4e13-874b-c68cdf578baf",
+        "pluginId": "inflak-main",
+        "model": "gpt-5.5",
+        "startedAt": "2026-09-01T09:57:47.865016+00:00",
+        "storagePath": "data/gallery_cases/inflak-main/17d5b3a920f54501b6895275dd7e572a",
+        "skillTraceFile": "skill-trace.jsonl"
+      },
+      "features": {
+        "eventCount": 52,
+        "completedSteps": 26,
+        "layers": [
+          "L1",
+          "L2",
+          "L3",
+          "L4"
+        ],
+        "interactionCount": 3,
+        "interactionPreviewRatio": 0.05,
+        "durationSeconds": 392,
+        "tools": [
+          "HTML widget renderer",
+          "generate image",
+          "restyle image"
+        ]
+      },
+      "layerFiles": {
+        "L1": [
+          {
+            "name": "iai-l1-core-module",
+            "path": "plugins/inflak-main/skills/iai-l1-core-module/SKILL.md",
+            "invocations": 9
+          }
+        ],
+        "L2": [
+          {
+            "name": "iai-l2-image-edit",
+            "path": "plugins/inflak-main/skills/iai-l2-image-edit/SKILL.md",
+            "invocations": 2
+          },
+          {
+            "name": "iai-l2-image-generation",
+            "path": "plugins/inflak-main/skills/iai-l2-image-generation/SKILL.md",
+            "invocations": 2
+          },
+          {
+            "name": "iai-l2-writing-draft",
+            "path": "plugins/inflak-main/skills/iai-l2-writing-draft/SKILL.md",
+            "invocations": 2
+          }
+        ],
+        "L3": [
+          {
+            "name": "iai-l3-image-compare",
+            "path": "plugins/inflak-main/skills/iai-l3-image-compare/SKILL.md",
+            "invocations": 1
+          },
+          {
+            "name": "iai-l3-structured-form",
+            "path": "plugins/inflak-main/skills/iai-l3-structured-form/SKILL.md",
+            "invocations": 2
+          }
+        ],
+        "L4": [
+          {
+            "name": "iai-l4-widget-renderer",
+            "path": "plugins/inflak-main/skills/iai-l4-widget-renderer/SKILL.md",
+            "invocations": 3
+          }
+        ]
+      },
+      "videoFile": "clips/inflak-main.mp4",
+      "historyFile": "inflak-main/17d5b3a920f54501b6895275dd7e572a/skill-trace.jsonl"
+    },
+    {
+      "caseId": "inflak-pN1-image-prompt-iteration",
+      "order": 1,
+      "title": "P1 Image Prompt Iteration",
+      "focus": "Prompt refinement",
+      "description": "P1 instantiates interactive prompt enhancement: the user selects and revises prompt elements through lightweight iterations before committing the instruction to image generation.",
+      "kind": "paradigm",
+      "coverTimeSeconds": 3,
+      "artifactSubstrates": [
+        "Text"
+      ],
+      "interactionRealizations": [
+        "Text Editing",
+        "Artifact Review"
+      ],
+      "videoUrl": "/api/gallery/cases/inflak-pN1-image-prompt-iteration/video",
+      "historyUrl": "/api/gallery/cases/inflak-pN1-image-prompt-iteration/runs/ff4591def79246c5b3b44a3dab0064da/history",
+      "run": {
+        "schemaVersion": "1.0",
+        "caseId": "inflak-pN1-image-prompt-iteration",
+        "runId": "ff4591def79246c5b3b44a3dab0064da",
+        "sessionId": "8c76d2b8-0a4f-408e-bef2-a6fbb23a047e",
+        "pluginId": "inflak-pN1-image-prompt-iteration",
+        "model": "gpt-5.5",
+        "startedAt": "2026-08-21T08:18:52.651173+00:00",
+        "storagePath": "data/gallery_cases/inflak-pN1-image-prompt-iteration/ff4591def79246c5b3b44a3dab0064da",
+        "skillTraceFile": "skill-trace.jsonl"
+      },
+      "features": {
+        "eventCount": 28,
+        "completedSteps": 14,
+        "layers": [
+          "L1",
+          "L2",
+          "L3",
+          "L4"
+        ],
+        "interactionCount": 2,
+        "interactionPreviewRatio": 0.1368,
+        "durationSeconds": 276,
+        "tools": [
+          "HTML widget renderer",
+          "generate image"
+        ]
+      },
+      "layerFiles": {
+        "L1": [
+          {
+            "name": "iai-l1-pN1-core-module",
+            "path": "plugins/inflak-pN1-image-prompt-iteration/skills/iai-l1-pN1-core-module/SKILL.md",
+            "invocations": 4
+          }
+        ],
+        "L2": [
+          {
+            "name": "iai-l2-pN1-image-prompt-refinement",
+            "path": "plugins/inflak-pN1-image-prompt-iteration/skills/iai-l2-pN1-image-prompt-refinement/SKILL.md",
+            "invocations": 3
+          }
+        ],
+        "L3": [
+          {
+            "name": "iai-l3-pN1-prompt-keyword-grid",
+            "path": "plugins/inflak-pN1-image-prompt-iteration/skills/iai-l3-pN1-prompt-keyword-grid/SKILL.md",
+            "invocations": 1
+          },
+          {
+            "name": "iai-l3-pN1-prompt-review",
+            "path": "plugins/inflak-pN1-image-prompt-iteration/skills/iai-l3-pN1-prompt-review/SKILL.md",
+            "invocations": 1
+          }
+        ],
+        "L4": [
+          {
+            "name": "iai-l4-pN1-widget-renderer",
+            "path": "plugins/inflak-pN1-image-prompt-iteration/skills/iai-l4-pN1-widget-renderer/SKILL.md",
+            "invocations": 2
+          }
+        ]
+      },
+      "videoFile": "clips/pN1-image-prompt-iteration.mp4",
+      "historyFile": "inflak-pN1-image-prompt-iteration/ff4591def79246c5b3b44a3dab0064da/skill-trace.jsonl"
+    },
+    {
+      "caseId": "inflak-pN2-input-grounded-prompt-structure",
+      "order": 2,
+      "title": "P2 Input-grounded Prompt Structure",
+      "focus": "Prompt structuring",
+      "description": "P2 instantiates prompt organization: source content is decomposed into traceable units that can be grouped, ordered, edited, and recombined into a structured instruction.",
+      "kind": "paradigm",
+      "coverTimeSeconds": 7,
+      "artifactSubstrates": [
+        "Text"
+      ],
+      "interactionRealizations": [
+        "Structured Input",
+        "Text Editing"
+      ],
+      "videoUrl": "/api/gallery/cases/inflak-pN2-input-grounded-prompt-structure/video",
+      "historyUrl": "/api/gallery/cases/inflak-pN2-input-grounded-prompt-structure/runs/bc22ac496dba4261a2bac425a966c207/history",
+      "run": {
+        "schemaVersion": "1.0",
+        "caseId": "inflak-pN2-input-grounded-prompt-structure",
+        "runId": "bc22ac496dba4261a2bac425a966c207",
+        "sessionId": "efb6cb29-c76a-498b-b056-dd88004470e7",
+        "pluginId": "inflak-pN2-input-grounded-prompt-structure",
+        "model": "gpt-5.5",
+        "startedAt": "2026-08-21T09:59:25.194129+00:00",
+        "storagePath": "data/gallery_cases/inflak-pN2-input-grounded-prompt-structure/bc22ac496dba4261a2bac425a966c207",
+        "skillTraceFile": "skill-trace.jsonl"
+      },
+      "features": {
+        "eventCount": 28,
+        "completedSteps": 14,
+        "layers": [
+          "L1",
+          "L2",
+          "L3",
+          "L4"
+        ],
+        "interactionCount": 2,
+        "interactionPreviewRatio": 0.094,
+        "durationSeconds": 307,
+        "tools": [
+          "HTML widget renderer",
+          "generate image"
+        ]
+      },
+      "layerFiles": {
+        "L1": [
+          {
+            "name": "iai-l1-pN2-core-module",
+            "path": "plugins/inflak-pN2-input-grounded-prompt-structure/skills/iai-l1-pN2-core-module/SKILL.md",
+            "invocations": 4
+          }
+        ],
+        "L2": [
+          {
+            "name": "iai-l2-pN2-visual-story-composition",
+            "path": "plugins/inflak-pN2-input-grounded-prompt-structure/skills/iai-l2-pN2-visual-story-composition/SKILL.md",
+            "invocations": 3
+          }
+        ],
+        "L3": [
+          {
+            "name": "iai-l3-pN2-storyboard-block-composer",
+            "path": "plugins/inflak-pN2-input-grounded-prompt-structure/skills/iai-l3-pN2-storyboard-block-composer/SKILL.md",
+            "invocations": 1
+          },
+          {
+            "name": "iai-l3-pN2-structured-instruction-preview",
+            "path": "plugins/inflak-pN2-input-grounded-prompt-structure/skills/iai-l3-pN2-structured-instruction-preview/SKILL.md",
+            "invocations": 1
+          }
+        ],
+        "L4": [
+          {
+            "name": "iai-l4-pN2-widget-renderer",
+            "path": "plugins/inflak-pN2-input-grounded-prompt-structure/skills/iai-l4-pN2-widget-renderer/SKILL.md",
+            "invocations": 2
+          }
+        ]
+      },
+      "videoFile": "clips/pN2-inputgrounded-prompt-structure.mp4",
+      "historyFile": "inflak-pN2-input-grounded-prompt-structure/bc22ac496dba4261a2bac425a966c207/skill-trace.jsonl"
+    },
+    {
+      "caseId": "inflak-pN3-sketch-layout",
+      "order": 3,
+      "title": "P3 Sketch-grounded Layout",
+      "focus": "Layout grounding",
+      "description": "P3 instantiates interaction-as-instruction: a user-authored sketch communicates spatial intent that would be cumbersome to express precisely in text alone.",
+      "kind": "paradigm",
+      "coverTimeSeconds": 10,
+      "artifactSubstrates": [
+        "Text",
+        "Sketch"
+      ],
+      "interactionRealizations": [
+        "Canvas Sketching",
+        "Artifact Review"
+      ],
+      "videoUrl": "/api/gallery/cases/inflak-pN3-sketch-layout/video",
+      "historyUrl": "/api/gallery/cases/inflak-pN3-sketch-layout/runs/1b71ade5820442f28a97a101ef4da890/history",
+      "run": {
+        "schemaVersion": "1.0",
+        "caseId": "inflak-pN3-sketch-layout",
+        "runId": "1b71ade5820442f28a97a101ef4da890",
+        "sessionId": "e42ef170-699b-4ba6-bb8e-82b18410f91a",
+        "pluginId": "inflak-pN3-sketch-layout",
+        "model": "gpt-5.5",
+        "startedAt": "2026-08-23T07:26:05.478383+00:00",
+        "storagePath": "data/gallery_cases/inflak-pN3-sketch-grounded-layout/1b71ade5820442f28a97a101ef4da890",
+        "skillTraceFile": "skill-trace.jsonl"
+      },
+      "features": {
+        "eventCount": 50,
+        "completedSteps": 24,
+        "layers": [
+          "L1",
+          "L2",
+          "L3",
+          "L4"
+        ],
+        "interactionCount": 3,
+        "interactionPreviewRatio": 0.1182,
+        "durationSeconds": 343,
+        "tools": [
+          "view",
+          "HTML widget renderer",
+          "rg",
+          "bash",
+          "edit image"
+        ]
+      },
+      "layerFiles": {
+        "L1": [
+          {
+            "name": "iai-l1-pN3-core-module",
+            "path": "plugins/inflak-pN3-sketch-layout/skills/iai-l1-pN3-core-module/SKILL.md",
+            "invocations": 4
+          }
+        ],
+        "L2": [
+          {
+            "name": "iai-l2-pN3-sketch-layout-planner",
+            "path": "plugins/inflak-pN3-sketch-layout/skills/iai-l2-pN3-sketch-layout-planner/SKILL.md",
+            "invocations": 4
+          }
+        ],
+        "L3": [
+          {
+            "name": "iai-l3-pN3-image-review",
+            "path": "plugins/inflak-pN3-sketch-layout/skills/iai-l3-pN3-image-review/SKILL.md",
+            "invocations": 1
+          },
+          {
+            "name": "iai-l3-pN3-semantic-sketch-pad",
+            "path": "plugins/inflak-pN3-sketch-layout/skills/iai-l3-pN3-semantic-sketch-pad/SKILL.md",
+            "invocations": 2
+          }
+        ],
+        "L4": [
+          {
+            "name": "iai-l4-pN3-widget-renderer",
+            "path": "plugins/inflak-pN3-sketch-layout/skills/iai-l4-pN3-widget-renderer/SKILL.md",
+            "invocations": 3
+          }
+        ]
+      },
+      "videoFile": "clips/pN3-sketchgrounded-layout-image-generation.mp4",
+      "historyFile": "inflak-pN3-sketch-grounded-layout/1b71ade5820442f28a97a101ef4da890/skill-trace.jsonl"
+    },
+    {
+      "caseId": "inflak-pN4-image-inpainting",
+      "order": 4,
+      "title": "P4 Artifact-grounded Inpainting",
+      "focus": "Local image editing",
+      "description": "P4 treats a referenced artifact as part of the instruction: the source image and a marked region jointly ground a localized generative edit.",
+      "kind": "paradigm",
+      "coverTimeSeconds": 22,
+      "artifactSubstrates": [
+        "Image (Raster)"
+      ],
+      "interactionRealizations": [
+        "Canvas Manipulation",
+        "Artifact Review"
+      ],
+      "videoUrl": "/api/gallery/cases/inflak-pN4-image-inpainting/video",
+      "historyUrl": "/api/gallery/cases/inflak-pN4-image-inpainting/runs/377097de5f794729ba8b70f0761878b2/history",
+      "run": {
+        "schemaVersion": "1.0",
+        "caseId": "inflak-pN4-image-inpainting",
+        "runId": "377097de5f794729ba8b70f0761878b2",
+        "sessionId": "f7a95929-bd5a-491c-8e1d-8cc703aa4357",
+        "pluginId": "inflak-pN4-image-inpainting",
+        "model": "gpt-5.5",
+        "startedAt": "2026-08-23T07:34:41.769808+00:00",
+        "storagePath": "data/gallery_cases/inflak-pN4-artifact-grounded-inpainting/377097de5f794729ba8b70f0761878b2",
+        "skillTraceFile": "skill-trace.jsonl"
+      },
+      "features": {
+        "eventCount": 32,
+        "completedSteps": 15,
+        "layers": [
+          "L1",
+          "L2",
+          "L3",
+          "L4"
+        ],
+        "interactionCount": 2,
+        "interactionPreviewRatio": 0.1509,
+        "durationSeconds": 307,
+        "tools": [
+          "HTML widget renderer",
+          "bash",
+          "edit image"
+        ]
+      },
+      "layerFiles": {
+        "L1": [
+          {
+            "name": "iai-l1-pN4-core-module",
+            "path": "plugins/inflak-pN4-image-inpainting/skills/iai-l1-pN4-core-module/SKILL.md",
+            "invocations": 4
+          }
+        ],
+        "L2": [
+          {
+            "name": "iai-l2-pN4-artifact-inpaint",
+            "path": "plugins/inflak-pN4-image-inpainting/skills/iai-l2-pN4-artifact-inpaint/SKILL.md",
+            "invocations": 3
+          }
+        ],
+        "L3": [
+          {
+            "name": "iai-l3-pN4-inpaint-region-editor",
+            "path": "plugins/inflak-pN4-image-inpainting/skills/iai-l3-pN4-inpaint-region-editor/SKILL.md",
+            "invocations": 1
+          },
+          {
+            "name": "iai-l3-pN4-inpaint-review",
+            "path": "plugins/inflak-pN4-image-inpainting/skills/iai-l3-pN4-inpaint-review/SKILL.md",
+            "invocations": 1
+          }
+        ],
+        "L4": [
+          {
+            "name": "iai-l4-pN4-widget-renderer",
+            "path": "plugins/inflak-pN4-image-inpainting/skills/iai-l4-pN4-widget-renderer/SKILL.md",
+            "invocations": 2
+          }
+        ]
+      },
+      "videoFile": "clips/pN4-artifactgrounded-local-inpaint.mp4",
+      "historyFile": "inflak-pN4-artifact-grounded-inpainting/377097de5f794729ba8b70f0761878b2/skill-trace.jsonl"
+    },
+    {
+      "caseId": "inflak-pN5-writing-brainstorm",
+      "order": 5,
+      "title": "P5 Writing Brainstorm",
+      "focus": "Idea exploration",
+      "description": "P5 instantiates AI-driven prompt suggestion: the model proposes distinct writing directions, while the user selects, combines, and refines them into an owned creative brief.",
+      "kind": "paradigm",
+      "coverTimeSeconds": 7,
+      "artifactSubstrates": [
+        "Text"
+      ],
+      "interactionRealizations": [
+        "Conversational Selection",
+        "Artifact Review"
+      ],
+      "videoUrl": "/api/gallery/cases/inflak-pN5-writing-brainstorm/video",
+      "historyUrl": "/api/gallery/cases/inflak-pN5-writing-brainstorm/runs/e632d2294a9a4eaead6eddd20b0a97aa/history",
+      "run": {
+        "schemaVersion": "1.0",
+        "caseId": "inflak-pN5-writing-brainstorm",
+        "runId": "e632d2294a9a4eaead6eddd20b0a97aa",
+        "sessionId": "3eeee9f9-9057-491a-87fe-68439a226f28",
+        "pluginId": "inflak-pN5-writing-brainstorm",
+        "model": "gpt-5.5",
+        "startedAt": "2026-08-24T02:31:55.626341+00:00",
+        "storagePath": "data/gallery_cases/inflak-pN5-writing-brainstorm/e632d2294a9a4eaead6eddd20b0a97aa",
+        "skillTraceFile": "skill-trace.jsonl"
+      },
+      "features": {
+        "eventCount": 26,
+        "completedSteps": 13,
+        "layers": [
+          "L1",
+          "L2",
+          "L3",
+          "L4"
+        ],
+        "interactionCount": 2,
+        "interactionPreviewRatio": 0.2561,
+        "durationSeconds": 218,
+        "tools": [
+          "HTML widget renderer",
+          "view"
+        ]
+      },
+      "layerFiles": {
+        "L1": [
+          {
+            "name": "iai-l1-pN5-core-module",
+            "path": "plugins/inflak-pN5-writing-brainstorm/skills/iai-l1-pN5-core-module/SKILL.md",
+            "invocations": 3
+          }
+        ],
+        "L2": [
+          {
+            "name": "iai-l2-pN5-writing-brainstorm",
+            "path": "plugins/inflak-pN5-writing-brainstorm/skills/iai-l2-pN5-writing-brainstorm/SKILL.md",
+            "invocations": 3
+          }
+        ],
+        "L3": [
+          {
+            "name": "iai-l3-pN5-narrative-direction-cards",
+            "path": "plugins/inflak-pN5-writing-brainstorm/skills/iai-l3-pN5-narrative-direction-cards/SKILL.md",
+            "invocations": 1
+          },
+          {
+            "name": "iai-l3-pN5-prompt-constellation",
+            "path": "plugins/inflak-pN5-writing-brainstorm/skills/iai-l3-pN5-prompt-constellation/SKILL.md",
+            "invocations": 1
+          }
+        ],
+        "L4": [
+          {
+            "name": "iai-l4-pN5-widget-renderer",
+            "path": "plugins/inflak-pN5-writing-brainstorm/skills/iai-l4-pN5-widget-renderer/SKILL.md",
+            "invocations": 2
+          }
+        ]
+      },
+      "videoFile": "clips/pN5-writing-brainstorm.mp4",
+      "historyFile": "inflak-pN5-writing-brainstorm/e632d2294a9a4eaead6eddd20b0a97aa/skill-trace.jsonl"
+    },
+    {
+      "caseId": "inflak-pN6",
+      "order": 6,
+      "title": "P6 Story Prompt Decomposition",
+      "focus": "Narrative planning",
+      "description": "P6 instantiates AI-driven prompt decomposition: the model breaks a story prompt into editable characters, settings, events, relationships, tone, and constraints for deliberate recomposition.",
+      "kind": "paradigm",
+      "coverTimeSeconds": 17,
+      "artifactSubstrates": [
+        "Text"
+      ],
+      "interactionRealizations": [
+        "Structured Input",
+        "Artifact Review"
+      ],
+      "videoUrl": "/api/gallery/cases/inflak-pN6/video",
+      "historyUrl": "/api/gallery/cases/inflak-pN6/runs/d344390125b44b53a3a3048983ccd60c/history",
+      "run": {
+        "schemaVersion": "1.0",
+        "caseId": "inflak-pN6",
+        "runId": "d344390125b44b53a3a3048983ccd60c",
+        "sessionId": "cb51c398-ed45-451e-8885-ea15f4ad31d3",
+        "pluginId": "inflak-pN6-story-creation",
+        "model": "gpt-5.5",
+        "startedAt": "2026-08-24T04:30:20.655206+00:00",
+        "storagePath": "data/gallery_cases/inflak-pN6-story-prompt-decomposition/d344390125b44b53a3a3048983ccd60c",
+        "skillTraceFile": "skill-trace.jsonl"
+      },
+      "features": {
+        "eventCount": 26,
+        "completedSteps": 13,
+        "layers": [
+          "L1",
+          "L2",
+          "L3",
+          "L4"
+        ],
+        "interactionCount": 2,
+        "interactionPreviewRatio": 0.322,
+        "durationSeconds": 239,
+        "tools": [
+          "HTML widget renderer",
+          "view"
+        ]
+      },
+      "layerFiles": {
+        "L1": [
+          {
+            "name": "iai-l1-pN6-core-module",
+            "path": "plugins/inflak-pN6-story-creation/skills/iai-l1-pN6-core-module/SKILL.md",
+            "invocations": 3
+          }
+        ],
+        "L2": [
+          {
+            "name": "iai-l2-pN6-prompt-decomposition",
+            "path": "plugins/inflak-pN6-story-creation/skills/iai-l2-pN6-prompt-decomposition/SKILL.md",
+            "invocations": 3
+          }
+        ],
+        "L3": [
+          {
+            "name": "iai-l3-pN6-prompt-structure-tree",
+            "path": "plugins/inflak-pN6-story-creation/skills/iai-l3-pN6-prompt-structure-tree/SKILL.md",
+            "invocations": 1
+          },
+          {
+            "name": "iai-l3-pN6-story-brief",
+            "path": "plugins/inflak-pN6-story-creation/skills/iai-l3-pN6-story-brief/SKILL.md",
+            "invocations": 1
+          }
+        ],
+        "L4": [
+          {
+            "name": "iai-l4-pN6-widget-renderer",
+            "path": "plugins/inflak-pN6-story-creation/skills/iai-l4-pN6-widget-renderer/SKILL.md",
+            "invocations": 2
+          }
+        ]
+      },
+      "videoFile": "clips/pN6-story-prompt-decomposition.mp4",
+      "historyFile": "inflak-pN6-story-prompt-decomposition/d344390125b44b53a3a3048983ccd60c/skill-trace.jsonl"
+    },
+    {
+      "caseId": "inflak-pN7-image-prompt-control",
+      "order": 7,
+      "title": "P7 Image Prompt Control",
+      "focus": "Generation control",
+      "description": "P7 instantiates generative prompt control widgets: controls are generated around semantic prompt units so users can tune visual attributes without repeatedly rewriting the full prompt.",
+      "kind": "paradigm",
+      "coverTimeSeconds": 5,
+      "artifactSubstrates": [
+        "Text"
+      ],
+      "interactionRealizations": [
+        "Structured Input",
+        "Artifact Review"
+      ],
+      "videoUrl": "/api/gallery/cases/inflak-pN7-image-prompt-control/video",
+      "historyUrl": "/api/gallery/cases/inflak-pN7-image-prompt-control/runs/c4222bce6c2c4bb2b8675562c812e888/history",
+      "run": {
+        "schemaVersion": "1.0",
+        "caseId": "inflak-pN7-image-prompt-control",
+        "runId": "c4222bce6c2c4bb2b8675562c812e888",
+        "sessionId": "851d07a3-78da-4868-b519-dd4f2ca3defa",
+        "pluginId": "inflak-pN7-image-prompt-control",
+        "model": "gpt-5.5",
+        "startedAt": "2026-08-24T05:31:31.034498+00:00",
+        "storagePath": "data/gallery_cases/inflak-pN7-image-prompt-control/c4222bce6c2c4bb2b8675562c812e888",
+        "skillTraceFile": "skill-trace.jsonl"
+      },
+      "features": {
+        "eventCount": 30,
+        "completedSteps": 14,
+        "layers": [
+          "L1",
+          "L2",
+          "L3",
+          "L4"
+        ],
+        "interactionCount": 2,
+        "interactionPreviewRatio": 0.1616,
+        "durationSeconds": 349,
+        "tools": [
+          "HTML widget renderer",
+          "bash",
+          "generate image"
+        ]
+      },
+      "layerFiles": {
+        "L1": [
+          {
+            "name": "iai-l1-pN7-core-module",
+            "path": "plugins/inflak-pN7-image-prompt-control/skills/iai-l1-pN7-core-module/SKILL.md",
+            "invocations": 3
+          }
+        ],
+        "L2": [
+          {
+            "name": "iai-l2-pN7-image-prompt-control",
+            "path": "plugins/inflak-pN7-image-prompt-control/skills/iai-l2-pN7-image-prompt-control/SKILL.md",
+            "invocations": 3
+          }
+        ],
+        "L3": [
+          {
+            "name": "iai-l3-pN7-embedded-token-inspector",
+            "path": "plugins/inflak-pN7-image-prompt-control/skills/iai-l3-pN7-embedded-token-inspector/SKILL.md",
+            "invocations": 1
+          },
+          {
+            "name": "iai-l3-pN7-prompt-control-review",
+            "path": "plugins/inflak-pN7-image-prompt-control/skills/iai-l3-pN7-prompt-control-review/SKILL.md",
+            "invocations": 1
+          }
+        ],
+        "L4": [
+          {
+            "name": "iai-l4-pN7-widget-renderer",
+            "path": "plugins/inflak-pN7-image-prompt-control/skills/iai-l4-pN7-widget-renderer/SKILL.md",
+            "invocations": 2
+          }
+        ]
+      },
+      "videoFile": "clips/pN7-image-generation-prompt-control.mp4",
+      "historyFile": "inflak-pN7-image-prompt-control/c4222bce6c2c4bb2b8675562c812e888/skill-trace.jsonl"
+    },
+    {
+      "caseId": "inflak-pN8",
+      "order": 8,
+      "title": "P8 Generative Collage Control",
+      "focus": "Spatial composition",
+      "description": "P8 instantiates generative artifact control widgets: object, style, transform, layer, and text controls are created around a collage so the generated artifact can be manipulated directly.",
+      "kind": "paradigm",
+      "coverTimeSeconds": 16,
+      "artifactSubstrates": [
+        "Vector Graphic",
+        "Spatial Composition"
+      ],
+      "interactionRealizations": [
+        "Conversational Selection",
+        "Canvas Manipulation"
+      ],
+      "videoUrl": "/api/gallery/cases/inflak-pN8/video",
+      "historyUrl": "/api/gallery/cases/inflak-pN8/runs/413efa3dae9e44b4905e8f990080aa82/history",
+      "run": {
+        "schemaVersion": "1.0",
+        "caseId": "inflak-pN8",
+        "runId": "413efa3dae9e44b4905e8f990080aa82",
+        "sessionId": "9ce5ff00-d632-402f-b274-d58e3dc07dab",
+        "pluginId": "inflak-pN8-collage-control",
+        "model": "gpt-5.5",
+        "startedAt": "2026-09-01T08:21:30.910496+00:00",
+        "storagePath": "data/gallery_cases/inflak-pN8-generative-collage-control/413efa3dae9e44b4905e8f990080aa82",
+        "skillTraceFile": "skill-trace.jsonl"
+      },
+      "features": {
+        "eventCount": 156,
+        "completedSteps": 78,
+        "layers": [
+          "L1",
+          "L2",
+          "L3",
+          "L4"
+        ],
+        "interactionCount": 2,
+        "interactionPreviewRatio": 0.9,
+        "durationSeconds": 2236,
+        "tools": [
+          "generate image",
+          "generate variations",
+          "extract collage cutouts",
+          "compose svg collage",
+          "HTML widget renderer"
+        ]
+      },
+      "layerFiles": {
+        "L1": [
+          {
+            "name": "iai-l1-pN8-core-module",
+            "path": "plugins/inflak-pN8-collage-control/skills/iai-l1-pN8-core-module/SKILL.md",
+            "invocations": 20
+          }
+        ],
+        "L2": [
+          {
+            "name": "iai-l2-pN8-collage-control",
+            "path": "plugins/inflak-pN8-collage-control/skills/iai-l2-pN8-collage-control/SKILL.md",
+            "invocations": 18
+          }
+        ],
+        "L3": [
+          {
+            "name": "iai-l3-pN8-authoring-preparation-tool",
+            "path": "plugins/inflak-pN8-collage-control/skills/iai-l3-pN8-authoring-preparation-tool/SKILL.md",
+            "invocations": 5
+          },
+          {
+            "name": "iai-l3-pN8-collage-review",
+            "path": "plugins/inflak-pN8-collage-control/skills/iai-l3-pN8-collage-review/SKILL.md",
+            "invocations": 2
+          },
+          {
+            "name": "iai-l3-pN8-element-generation-authoring-tool",
+            "path": "plugins/inflak-pN8-collage-control/skills/iai-l3-pN8-element-generation-authoring-tool/SKILL.md",
+            "invocations": 5
+          },
+          {
+            "name": "iai-l3-pN8-element-variant-authoring-tool",
+            "path": "plugins/inflak-pN8-collage-control/skills/iai-l3-pN8-element-variant-authoring-tool/SKILL.md",
+            "invocations": 5
+          },
+          {
+            "name": "iai-l3-pN8-svg-collage-composition-tool",
+            "path": "plugins/inflak-pN8-collage-control/skills/iai-l3-pN8-svg-collage-composition-tool/SKILL.md",
+            "invocations": 2
+          }
+        ],
+        "L4": [
+          {
+            "name": "iai-l4-pN8-widget-renderer",
+            "path": "plugins/inflak-pN8-collage-control/skills/iai-l4-pN8-widget-renderer/SKILL.md",
+            "invocations": 2
+          }
+        ]
+      },
+      "videoFile": "clips/pN8-generative-collage-control-widget.mp4",
+      "historyFile": "inflak-pN8-generative-collage-control/413efa3dae9e44b4905e8f990080aa82/skill-trace.jsonl"
+    },
+    {
+      "caseId": "inflak-pN9-chart-analysis-instruction",
+      "order": 9,
+      "title": "P9 Chart Analysis Instruction",
+      "focus": "Visual analysis",
+      "description": "P9 instantiates artifact-to-instruction: evidence in a chart is transformed into a grounded analysis brief that the user can scope, compose, and review.",
+      "kind": "paradigm",
+      "coverTimeSeconds": 20,
+      "artifactSubstrates": [
+        "Data Visualization"
+      ],
+      "interactionRealizations": [
+        "Conversational Selection",
+        "Structured Input",
+        "Artifact Review"
+      ],
+      "videoUrl": "/api/gallery/cases/inflak-pN9-chart-analysis-instruction/video",
+      "historyUrl": "/api/gallery/cases/inflak-pN9-chart-analysis-instruction/runs/1fb3f5b9ecf7402693da26cf5f28dc30/history",
+      "run": {
+        "schemaVersion": "1.0",
+        "caseId": "inflak-pN9-chart-analysis-instruction",
+        "runId": "1fb3f5b9ecf7402693da26cf5f28dc30",
+        "sessionId": "a098988a-0869-4ea7-b50d-924e2ea3f5da",
+        "pluginId": "inflak-pN9-chart-analysis-instruction",
+        "model": "gpt-5.5",
+        "startedAt": "2026-08-25T08:07:23.710574+00:00",
+        "storagePath": "data/gallery_cases/inflak-pN9-chart-analysis-instruction/1fb3f5b9ecf7402693da26cf5f28dc30",
+        "skillTraceFile": "skill-trace.jsonl"
+      },
+      "features": {
+        "eventCount": 68,
+        "completedSteps": 32,
+        "layers": [
+          "L1",
+          "L2",
+          "L3",
+          "L4"
+        ],
+        "interactionCount": 4,
+        "interactionPreviewRatio": 0.1226,
+        "durationSeconds": 459,
+        "tools": [
+          "HTML widget renderer",
+          "view",
+          "bash",
+          "compile chart report"
+        ]
+      },
+      "layerFiles": {
+        "L1": [
+          {
+            "name": "iai-l1-pN9-core-module",
+            "path": "plugins/inflak-pN9-chart-analysis-instruction/skills/iai-l1-pN9-core-module/SKILL.md",
+            "invocations": 7
+          }
+        ],
+        "L2": [
+          {
+            "name": "iai-l2-pN9-chart-analysis-exploration",
+            "path": "plugins/inflak-pN9-chart-analysis-instruction/skills/iai-l2-pN9-chart-analysis-exploration/SKILL.md",
+            "invocations": 7
+          }
+        ],
+        "L3": [
+          {
+            "name": "iai-l3-pN9-analysis-brief-builder",
+            "path": "plugins/inflak-pN9-chart-analysis-instruction/skills/iai-l3-pN9-analysis-brief-builder/SKILL.md",
+            "invocations": 1
+          },
+          {
+            "name": "iai-l3-pN9-analysis-lens-chips",
+            "path": "plugins/inflak-pN9-chart-analysis-instruction/skills/iai-l3-pN9-analysis-lens-chips/SKILL.md",
+            "invocations": 1
+          },
+          {
+            "name": "iai-l3-pN9-chart-report-composer",
+            "path": "plugins/inflak-pN9-chart-analysis-instruction/skills/iai-l3-pN9-chart-report-composer/SKILL.md",
+            "invocations": 1
+          },
+          {
+            "name": "iai-l3-pN9-chart-report-review",
+            "path": "plugins/inflak-pN9-chart-analysis-instruction/skills/iai-l3-pN9-chart-report-review/SKILL.md",
+            "invocations": 1
+          }
+        ],
+        "L4": [
+          {
+            "name": "iai-l4-pN9-widget-renderer",
+            "path": "plugins/inflak-pN9-chart-analysis-instruction/skills/iai-l4-pN9-widget-renderer/SKILL.md",
+            "invocations": 4
+          }
+        ]
+      },
+      "videoFile": "clips/pN9-chart-analysis-instruction.mp4",
+      "historyFile": "inflak-pN9-chart-analysis-instruction/1fb3f5b9ecf7402693da26cf5f28dc30/skill-trace.jsonl"
+    },
+    {
+      "caseId": "inflak-pN10-svg-refinement-instruction",
+      "order": 10,
+      "title": "P10 SVG Refinement Instruction",
+      "focus": "Object-level refinement",
+      "description": "P10 instantiates artifact-to-multimodal-instruction: SVG objects and their relationships become referential context for precise, structured refinement instructions.",
+      "kind": "paradigm",
+      "coverTimeSeconds": 13,
+      "artifactSubstrates": [
+        "Vector Graphic"
+      ],
+      "interactionRealizations": [
+        "Canvas Manipulation",
+        "Artifact Review"
+      ],
+      "videoUrl": "/api/gallery/cases/inflak-pN10-svg-refinement-instruction/video",
+      "historyUrl": "/api/gallery/cases/inflak-pN10-svg-refinement-instruction/runs/096e536efe9e438f867b56d81f736853/history",
+      "run": {
+        "schemaVersion": "1.0",
+        "caseId": "inflak-pN10-svg-refinement-instruction",
+        "runId": "096e536efe9e438f867b56d81f736853",
+        "sessionId": "681d13dd-8c29-4b48-b9c3-9a4a3d1180d1",
+        "pluginId": "inflak-pN10-svg-refinement-instruction",
+        "model": "gpt-5.5",
+        "startedAt": "2026-09-01T08:08:12.447393+00:00",
+        "storagePath": "data/gallery_cases/inflak-pN10-svg-refinement-instruction/096e536efe9e438f867b56d81f736853",
+        "skillTraceFile": "skill-trace.jsonl"
+      },
+      "features": {
+        "eventCount": 150,
+        "completedSteps": 73,
+        "layers": [
+          "L1",
+          "L2",
+          "L3",
+          "L4"
+        ],
+        "interactionCount": 4,
+        "interactionPreviewRatio": 0.1851,
+        "durationSeconds": 638,
+        "tools": [
+          "view",
+          "rg",
+          "HTML widget renderer",
+          "manage svg document",
+          "bash"
+        ]
+      },
+      "layerFiles": {
+        "L1": [
+          {
+            "name": "iai-l1-pN10-core-module",
+            "path": "plugins/inflak-pN10-svg-refinement-instruction/skills/iai-l1-pN10-core-module/SKILL.md",
+            "invocations": 13
+          }
+        ],
+        "L2": [
+          {
+            "name": "iai-l2-pN10-collage-instruction",
+            "path": "plugins/inflak-pN10-svg-refinement-instruction/skills/iai-l2-pN10-collage-instruction/SKILL.md",
+            "invocations": 11
+          }
+        ],
+        "L3": [
+          {
+            "name": "iai-l3-pn10-augmented-instruction-review",
+            "path": "plugins/inflak-pN10-svg-refinement-instruction/skills/iai-l3-pN10-augmented-instruction-review/SKILL.md",
+            "invocations": 1
+          },
+          {
+            "name": "iai-l3-pn10-object-suggestion-review",
+            "path": "plugins/inflak-pN10-svg-refinement-instruction/skills/iai-l3-pN10-object-suggestion-review/SKILL.md",
+            "invocations": 2
+          },
+          {
+            "name": "iai-l3-pN10-svg-authoring-tool",
+            "path": "plugins/inflak-pN10-svg-refinement-instruction/skills/iai-l3-pN10-svg-authoring-tool/SKILL.md",
+            "invocations": 3
+          },
+          {
+            "name": "iai-l3-pN10-svg-document-tool",
+            "path": "plugins/inflak-pN10-svg-refinement-instruction/skills/iai-l3-pN10-svg-document-tool/SKILL.md",
+            "invocations": 3
+          },
+          {
+            "name": "iai-l3-pn10-svg-revision-comparison",
+            "path": "plugins/inflak-pN10-svg-refinement-instruction/skills/iai-l3-pN10-svg-revision-comparison/SKILL.md",
+            "invocations": 2
+          }
+        ],
+        "L4": [
+          {
+            "name": "iai-l4-pN10-widget-renderer",
+            "path": "plugins/inflak-pN10-svg-refinement-instruction/skills/iai-l4-pN10-widget-renderer/SKILL.md",
+            "invocations": 4
+          }
+        ]
+      },
+      "videoFile": "clips/pN10-svg-refinement-instruction.mp4",
+      "historyFile": "inflak-pN10-svg-refinement-instruction/096e536efe9e438f867b56d81f736853/skill-trace.jsonl"
+    },
+    {
+      "caseId": "inflak-pN11-svg-prompt-enhancement",
+      "order": 11,
+      "title": "P11 SVG Prompt Enhancement",
+      "focus": "Prompt enhancement",
+      "description": "P11 instantiates artifact-driven prompt enhancement: concepts in a text prompt are aligned with stable SVG objects, resolving targets and actions before execution.",
+      "kind": "paradigm",
+      "coverTimeSeconds": 9,
+      "artifactSubstrates": [
+        "Text",
+        "Vector Graphic"
+      ],
+      "interactionRealizations": [
+        "Structured Input",
+        "Canvas Manipulation",
+        "Artifact Review"
+      ],
+      "videoUrl": "/api/gallery/cases/inflak-pN11-svg-prompt-enhancement/video",
+      "historyUrl": "/api/gallery/cases/inflak-pN11-svg-prompt-enhancement/runs/05bfe68510d8472b9cabc88c7e9df7d3/history",
+      "run": {
+        "schemaVersion": "1.0",
+        "caseId": "inflak-pN11-svg-prompt-enhancement",
+        "runId": "05bfe68510d8472b9cabc88c7e9df7d3",
+        "sessionId": "67a62bea-3757-44c6-ad99-088faea3c130",
+        "pluginId": "inflak-pN11-svg-prompt-enhancement",
+        "model": "gpt-5.5",
+        "startedAt": "2026-09-01T04:32:48.468819+00:00",
+        "storagePath": "data/gallery_cases/inflak-pN11-svg-prompt-enhancement/05bfe68510d8472b9cabc88c7e9df7d3",
+        "skillTraceFile": "skill-trace.jsonl"
+      },
+      "features": {
+        "eventCount": 138,
+        "completedSteps": 64,
+        "layers": [
+          "L1",
+          "L2",
+          "L3",
+          "L4"
+        ],
+        "interactionCount": 3,
+        "interactionPreviewRatio": 0.146,
+        "durationSeconds": 418,
+        "tools": [
+          "bash",
+          "view",
+          "manage svg document",
+          "HTML widget renderer",
+          "rg"
+        ]
+      },
+      "layerFiles": {
+        "L1": [
+          {
+            "name": "iai-l1-pN11-core-module",
+            "path": "plugins/inflak-pN11-svg-prompt-enhancement/skills/iai-l1-pN11-core-module/SKILL.md",
+            "invocations": 14
+          }
+        ],
+        "L2": [
+          {
+            "name": "iai-l2-pN11-svg-prompt-enhancement",
+            "path": "plugins/inflak-pN11-svg-prompt-enhancement/skills/iai-l2-pN11-svg-prompt-enhancement/SKILL.md",
+            "invocations": 12
+          }
+        ],
+        "L3": [
+          {
+            "name": "iai-l3-pn11-prompt-action-specificity-editor",
+            "path": "plugins/inflak-pN11-svg-prompt-enhancement/skills/iai-l3-pN11-prompt-action-specificity-editor/SKILL.md",
+            "invocations": 2
+          },
+          {
+            "name": "iai-l3-pn11-prompt-object-alignment",
+            "path": "plugins/inflak-pN11-svg-prompt-enhancement/skills/iai-l3-pN11-prompt-object-alignment/SKILL.md",
+            "invocations": 1
+          },
+          {
+            "name": "iai-l3-pN11-svg-authoring-tool",
+            "path": "plugins/inflak-pN11-svg-prompt-enhancement/skills/iai-l3-pN11-svg-authoring-tool/SKILL.md",
+            "invocations": 3
+          },
+          {
+            "name": "iai-l3-pN11-svg-document-tool",
+            "path": "plugins/inflak-pN11-svg-prompt-enhancement/skills/iai-l3-pN11-svg-document-tool/SKILL.md",
+            "invocations": 3
+          }
+        ],
+        "L4": [
+          {
+            "name": "iai-l4-pN11-widget-renderer",
+            "path": "plugins/inflak-pN11-svg-prompt-enhancement/skills/iai-l4-pN11-widget-renderer/SKILL.md",
+            "invocations": 3
+          }
+        ]
+      },
+      "videoFile": "clips/pN11-svg-prompt-enhancement.mp4",
+      "historyFile": "inflak-pN11-svg-prompt-enhancement/05bfe68510d8472b9cabc88c7e9df7d3/skill-trace.jsonl"
+    },
+    {
+      "caseId": "inflak-pN12-interactive-svg-refinement",
+      "order": 12,
+      "title": "P12 Interactive SVG Refinement",
+      "focus": "Direct manipulation",
+      "description": "P12 instantiates interactive artifact refinement: direct controls preview deterministic SVG changes, and only confirmed operations become a new artifact revision.",
+      "kind": "paradigm",
+      "coverTimeSeconds": 3,
+      "artifactSubstrates": [
+        "Vector Graphic"
+      ],
+      "interactionRealizations": [
+        "Canvas Manipulation",
+        "Artifact Review"
+      ],
+      "videoUrl": "/api/gallery/cases/inflak-pN12-interactive-svg-refinement/video",
+      "historyUrl": "/api/gallery/cases/inflak-pN12-interactive-svg-refinement/runs/0825e4a1e50a459ebed4bbacfcb6f132/history",
+      "run": {
+        "schemaVersion": "1.0",
+        "caseId": "inflak-pN12-interactive-svg-refinement",
+        "runId": "0825e4a1e50a459ebed4bbacfcb6f132",
+        "sessionId": "2a2a15aa-4b31-4793-ba6f-628547c4e827",
+        "pluginId": "inflak-pN12-interactive-svg-refinement",
+        "model": "gpt-5.5",
+        "startedAt": "2026-09-01T07:09:24.475538+00:00",
+        "storagePath": "data/gallery_cases/inflak-pN12-interactive-svg-refinement/0825e4a1e50a459ebed4bbacfcb6f132",
+        "skillTraceFile": "skill-trace.jsonl"
+      },
+      "features": {
+        "eventCount": 66,
+        "completedSteps": 28,
+        "layers": [
+          "L1",
+          "L2",
+          "L3",
+          "L4"
+        ],
+        "interactionCount": 2,
+        "interactionPreviewRatio": 0.176,
+        "durationSeconds": 357,
+        "tools": [
+          "bash",
+          "manage svg document",
+          "HTML widget renderer",
+          "view"
+        ]
+      },
+      "layerFiles": {
+        "L1": [
+          {
+            "name": "iai-l1-pN12-core-module",
+            "path": "plugins/inflak-pN12-interactive-svg-refinement/skills/iai-l1-pN12-core-module/SKILL.md",
+            "invocations": 7
+          }
+        ],
+        "L2": [
+          {
+            "name": "iai-l2-pN12-interactive-svg-refinement",
+            "path": "plugins/inflak-pN12-interactive-svg-refinement/skills/iai-l2-pN12-interactive-svg-refinement/SKILL.md",
+            "invocations": 5
+          }
+        ],
+        "L3": [
+          {
+            "name": "iai-l3-pN12-object-color-palette",
+            "path": "plugins/inflak-pN12-interactive-svg-refinement/skills/iai-l3-pN12-object-color-palette/SKILL.md",
+            "invocations": 1
+          },
+          {
+            "name": "iai-l3-pN12-svg-collage-layout-board",
+            "path": "plugins/inflak-pN12-interactive-svg-refinement/skills/iai-l3-pN12-svg-collage-layout-board/SKILL.md",
+            "invocations": 1
+          },
+          {
+            "name": "iai-l3-pN12-svg-document-tool",
+            "path": "plugins/inflak-pN12-interactive-svg-refinement/skills/iai-l3-pN12-svg-document-tool/SKILL.md",
+            "invocations": 2
+          }
+        ],
+        "L4": [
+          {
+            "name": "iai-l4-pN12-widget-renderer",
+            "path": "plugins/inflak-pN12-interactive-svg-refinement/skills/iai-l4-pN12-widget-renderer/SKILL.md",
+            "invocations": 2
+          }
+        ]
+      },
+      "videoFile": "clips/pN12-interactive-svg-refinement.mp4",
+      "historyFile": "inflak-pN12-interactive-svg-refinement/0825e4a1e50a459ebed4bbacfcb6f132/skill-trace.jsonl"
+    },
+    {
+      "caseId": "inflak-pN13-proactive-intent-recommendation",
+      "order": 13,
+      "title": "P13 Proactive Intent Recommendation",
+      "focus": "Intent discovery",
+      "description": "P13 extends the IAI design space with proactive intent recommendation: the model infers plausible next goals from context, then lets the user choose or state a different intention before action.",
+      "kind": "paradigm",
+      "coverTimeSeconds": 6,
+      "artifactSubstrates": [
+        "Image (Raster)",
+        "Vector Graphic"
+      ],
+      "interactionRealizations": [
+        "Conversational Selection",
+        "Canvas Manipulation",
+        "Artifact Review"
+      ],
+      "videoUrl": "/api/gallery/cases/inflak-pN13-proactive-intent-recommendation/video",
+      "historyUrl": "/api/gallery/cases/inflak-pN13-proactive-intent-recommendation/runs/3018ba290df0483095b213bb6403445f/history",
+      "run": {
+        "schemaVersion": "1.0",
+        "caseId": "inflak-pN13-proactive-intent-recommendation",
+        "runId": "3018ba290df0483095b213bb6403445f",
+        "sessionId": "6b7fc61e-6d75-4563-88cc-d902be116732",
+        "pluginId": "inflak-pN13-proactive-intent-recommendation",
+        "model": "gpt-5.5",
+        "startedAt": "2026-09-01T11:33:21.525315+00:00",
+        "storagePath": "data/gallery_cases/inflak-pN13-proactive-intent-recommendation/3018ba290df0483095b213bb6403445f",
+        "skillTraceFile": "skill-trace.jsonl"
+      },
+      "features": {
+        "eventCount": 16,
+        "completedSteps": 8,
+        "layers": [
+          "L1",
+          "L2",
+          "L3",
+          "L4"
+        ],
+        "interactionCount": 1,
+        "interactionPreviewRatio": 0.5389,
+        "durationSeconds": 96,
+        "tools": [
+          "HTML widget renderer"
+        ]
+      },
+      "layerFiles": {
+        "L1": [
+          {
+            "name": "iai-l1-pN13-core-module",
+            "path": "plugins/inflak-pN13-proactive-intent-recommendation/skills/iai-l1-pN13-core-module/SKILL.md",
+            "invocations": 3
+          }
+        ],
+        "L2": [
+          {
+            "name": "iai-l2-pN13-proactive-intent-recommendation",
+            "path": "plugins/inflak-pN13-proactive-intent-recommendation/skills/iai-l2-pN13-proactive-image-edit/SKILL.md",
+            "invocations": 2
+          }
+        ],
+        "L3": [
+          {
+            "name": "iai-l3-pN13-intention-basic-widget",
+            "path": "plugins/inflak-pN13-proactive-intent-recommendation/skills/iai-l3-pN13-intention-basic-widget/SKILL.md",
+            "invocations": 1
+          }
+        ],
+        "L4": [
+          {
+            "name": "iai-l4-pN13-widget-renderer",
+            "path": "plugins/inflak-pN13-proactive-intent-recommendation/skills/iai-l4-pN13-widget-renderer/SKILL.md",
+            "invocations": 1
+          }
+        ]
+      },
+      "videoFile": "clips/pN13-proactive-intent-recommendation).mp4",
+      "historyFile": "inflak-pN13-proactive-intent-recommendation/3018ba290df0483095b213bb6403445f/skill-trace.jsonl"
+    },
+    {
+      "caseId": "inflak-svg-authoring",
+      "order": 14,
+      "title": "SVG Collage Authoring",
+      "focus": "Authoring workflow",
+      "description": "This authoring case combines conversational intent, generated assets, and direct SVG composition controls in a revisioned collage workflow.",
+      "kind": "authoring",
+      "coverTimeSeconds": 33,
+      "artifactSubstrates": [
+        "Vector Graphic",
+        "Spatial Composition"
+      ],
+      "interactionRealizations": [
+        "Conversational Selection",
+        "Canvas Manipulation",
+        "Artifact Review"
+      ],
+      "videoUrl": "/api/gallery/cases/inflak-svg-authoring/video",
+      "historyUrl": "/api/gallery/cases/inflak-svg-authoring/runs/607c885f682b4c728c493b2b05a9627b/history",
+      "run": {
+        "schemaVersion": "1.0",
+        "caseId": "inflak-svg-authoring",
+        "runId": "607c885f682b4c728c493b2b05a9627b",
+        "sessionId": "bcdba131-2c54-426b-a32c-cb990010c190",
+        "pluginId": "inflak-svg-authoring",
+        "model": "gpt-5.5",
+        "startedAt": "2026-09-02T10:10:24.570292+00:00",
+        "storagePath": "data/gallery_cases/inflak-svg-collage-authoring/607c885f682b4c728c493b2b05a9627b",
+        "skillTraceFile": "skill-trace.jsonl"
+      },
+      "features": {
+        "eventCount": 198,
+        "completedSteps": 99,
+        "layers": [
+          "L1",
+          "L2",
+          "L3",
+          "L4"
+        ],
+        "interactionCount": 5,
+        "interactionPreviewRatio": 0.2887,
+        "durationSeconds": 929,
+        "tools": [
+          "view",
+          "generate image",
+          "compose svg collage",
+          "rg",
+          "HTML widget renderer"
+        ]
+      },
+      "layerFiles": {
+        "L1": [
+          {
+            "name": "iai-l1-svg-authoring-core",
+            "path": "plugins/inflak-svg-authoring/skills/iai-l1-svg-authoring-core/SKILL.md",
+            "invocations": 19
+          }
+        ],
+        "L2": [
+          {
+            "name": "iai-l2-svg-authoring-planner",
+            "path": "plugins/inflak-svg-authoring/skills/iai-l2-svg-authoring-planner/SKILL.md",
+            "invocations": 15
+          }
+        ],
+        "L3": [
+          {
+            "name": "iai-l3-svg-artifact-review",
+            "path": "plugins/inflak-svg-authoring/skills/iai-l3-svg-artifact-review/SKILL.md",
+            "invocations": 4
+          },
+          {
+            "name": "iai-l3-svg-external-tool",
+            "path": "plugins/inflak-svg-authoring/skills/iai-l3-svg-external-tool/SKILL.md",
+            "invocations": 9
+          },
+          {
+            "name": "iai-l3-svg-proposal-review",
+            "path": "plugins/inflak-svg-authoring/skills/iai-l3-svg-proposal-review/SKILL.md",
+            "invocations": 1
+          }
+        ],
+        "L4": [
+          {
+            "name": "iai-l4-svg-authoring-renderer",
+            "path": "plugins/inflak-svg-authoring/skills/iai-l4-svg-authoring-renderer/SKILL.md",
+            "invocations": 5
+          }
+        ]
+      },
+      "videoFile": "clips/inflak-svg-collage-authoring.mp4",
+      "historyFile": "inflak-svg-collage-authoring/607c885f682b4c728c493b2b05a9627b/skill-trace.jsonl"
+    }
+  ],
+  "count": 15,
+  "facets": {
+    "artifactSubstrates": [
+      "Data Visualization",
+      "Image (Raster)",
+      "Sketch",
+      "Spatial Composition",
+      "Text",
+      "Vector Graphic"
+    ],
+    "interactionRealizations": [
+      "Artifact Review",
+      "Canvas Manipulation",
+      "Canvas Sketching",
+      "Conversational Selection",
+      "Structured Input",
+      "Text Editing"
+    ]
+  }
+}

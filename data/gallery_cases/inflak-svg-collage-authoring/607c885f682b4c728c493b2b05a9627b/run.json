@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "1.0",
+  "caseId": "inflak-svg-authoring",
+  "runId": "607c885f682b4c728c493b2b05a9627b",
+  "sessionId": "bcdba131-2c54-426b-a32c-cb990010c190",
+  "pluginId": "inflak-svg-authoring",
+  "model": "gpt-5.5",
+  "startedAt": "2026-09-02T10:10:24.570292+00:00",
+  "storagePath": "data/gallery_cases/inflak-svg-collage-authoring/607c885f682b4c728c493b2b05a9627b",
+  "skillTraceFile": "skill-trace.jsonl"
+}

@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "1.0",
+  "caseId": "inflak-pN8",
+  "runId": "413efa3dae9e44b4905e8f990080aa82",
+  "sessionId": "9ce5ff00-d632-402f-b274-d58e3dc07dab",
+  "pluginId": "inflak-pN8-collage-control",
+  "model": "gpt-5.5",
+  "startedAt": "2026-09-01T08:21:30.910496+00:00",
+  "storagePath": "data/gallery_cases/inflak-pN8-generative-collage-control/413efa3dae9e44b4905e8f990080aa82",
+  "skillTraceFile": "skill-trace.jsonl"
+}

@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "1.0",
+  "caseId": "inflak-pN10-svg-refinement-instruction",
+  "runId": "096e536efe9e438f867b56d81f736853",
+  "sessionId": "681d13dd-8c29-4b48-b9c3-9a4a3d1180d1",
+  "pluginId": "inflak-pN10-svg-refinement-instruction",
+  "model": "gpt-5.5",
+  "startedAt": "2026-09-01T08:08:12.447393+00:00",
+  "storagePath": "data/gallery_cases/inflak-pN10-svg-refinement-instruction/096e536efe9e438f867b56d81f736853",
+  "skillTraceFile": "skill-trace.jsonl"
+}

@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>InFlak Case Gallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Newsreader:opsz,wght@6..72,500;6..72,600&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/gallery/gallery.css?v=20260902" />
+  </head>
+  <body>
+    <header class="gallery-header">
+      <a class="gallery-brand" href="/gallery/" aria-label="InFlak Case Gallery">
+        <img src="/assets/inflak-logo.png" alt="InFlak" />
+      </a>
+      <nav aria-label="Primary navigation">
+        <a class="active" href="/gallery/" aria-current="page">Case gallery</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="gallery-intro">
+        <div>
+          <h1>Case Gallery</h1>
+        </div>
+      </section>
+
+      <section class="gallery-toolbar" aria-label="Gallery filters">
+        <div class="filter-tabs" role="group" aria-label="Case type">
+          <button class="active" type="button" data-filter="all">All</button>
+          <button type="button" data-filter="paradigm">Paradigms</button>
+          <button type="button" data-filter="system">Core system</button>
+          <button type="button" data-filter="authoring">Authoring</button>
+        </div>
+        <label class="gallery-search">
+          <span class="sr-only">Search cases</span>
+          <i data-lucide="search" aria-hidden="true"></i>
+          <input id="gallery-search" type="search" placeholder="Search cases or features" autocomplete="off" />
+        </label>
+      </section>
+
+      <section class="taxonomy-filters" aria-label="Taxonomy filters">
+        <div class="taxonomy-filter-row">
+          <span>Artifact substrate</span>
+          <div id="substrate-filters" class="taxonomy-options" role="group" aria-label="Artifact substrate"></div>
+        </div>
+        <div class="taxonomy-filter-row">
+          <span>Interaction realization</span>
+          <div id="realization-filters" class="taxonomy-options" role="group" aria-label="Interaction realization"></div>
+        </div>
+        <div class="filter-result">
+          <span id="filter-result-count">15 cases</span>
+          <button id="clear-taxonomy-filters" class="clear-filters hidden" type="button">Clear filters</button>
+        </div>
+      </section>
+
+      <section id="gallery-grid" class="gallery-grid" aria-live="polite"></section>
+      <p id="gallery-empty" class="gallery-empty hidden">No cases match this view.</p>
+    </main>
+
+    <dialog id="case-dialog" class="case-dialog">
+      <div class="dialog-shell">
+        <header class="dialog-header">
+          <div>
+            <p id="dialog-kicker" class="eyebrow"></p>
+            <h2 id="dialog-title"></h2>
+          </div>
+          <button id="dialog-close" class="icon-button" type="button" aria-label="Close" title="Close">
+            <i data-lucide="x" aria-hidden="true"></i>
+          </button>
+        </header>
+        <div class="dialog-content">
+          <div class="video-stage">
+            <video id="dialog-video" controls playsinline preload="metadata"></video>
+          </div>
+          <aside class="case-evidence">
+            <section class="case-about">
+              <div class="section-heading">
+                <h3 id="dialog-about-title">About this paradigm</h3>
+              </div>
+              <p id="dialog-description"></p>
+            </section>
+            <section class="layer-files-section">
+              <div class="section-heading">
+                <h3>Layer files in this recording</h3>
+              </div>
+              <div id="dialog-layer-files" class="layer-file-groups"></div>
+            </section>
+            <section>
+              <div class="section-heading">
+                <h3>Derived features</h3>
+                <span id="dialog-model" class="model-chip"></span>
+              </div>
+              <div id="dialog-features" class="feature-list"></div>
+            </section>
+            <section class="history-section">
+              <div class="section-heading">
+                <h3>History file</h3>
+                <a id="history-download" class="icon-button" href="#" download title="Download history" aria-label="Download history">
+                  <i data-lucide="download" aria-hidden="true"></i>
+                </a>
+              </div>
+              <pre id="history-preview">Loading history...</pre>
+            </section>
+          </aside>
+        </div>
+      </div>
+    </dialog>
+
+    <template id="case-card-template">
+      <article class="case-card">
+        <button class="case-open" type="button">
+          <div class="video-preview">
+            <video muted playsinline preload="metadata"></video>
+            <span class="play-control"><i data-lucide="play" aria-hidden="true"></i></span>
+            <span class="case-index"></span>
+          </div>
+          <div class="case-copy">
+            <p class="case-kind"></p>
+            <h2></h2>
+            <p class="case-focus"></p>
+            <div class="case-tags" aria-label="Case taxonomy"></div>
+            <div class="case-stats"></div>
+          </div>
+        </button>
+      </article>
+    </template>
+
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+    <script type="module" src="/gallery/gallery.js?v=20260902"></script>
+  </body>
+</html>

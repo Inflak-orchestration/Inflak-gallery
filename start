@@ -1,0 +1,9 @@
+#!/usr/bin/env zsh
+set -euo pipefail
+
+SCRIPT_DIR=${0:A:h}
+PORT=${INFLAK_GALLERY_PORT:-8012}
+PYTHON=${INFLAK_GALLERY_PYTHON:-python3}
+
+cd "$SCRIPT_DIR"
+exec "$PYTHON" -m uvicorn app:app --host 127.0.0.1 --port "$PORT" --reload
