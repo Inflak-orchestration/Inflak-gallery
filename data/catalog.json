@@ -9,78 +9,77 @@
       "kind": "system",
       "coverTimeSeconds": 10,
       "artifactSubstrates": [
-        "Text",
-        "Image (Raster)"
+        "text",
+        "raster images"
       ],
       "interactionRealizations": [
-        "Structured Input",
-        "Artifact Review"
+        "annotation",
+        "toggling"
       ],
       "videoUrl": "/api/gallery/cases/inflak-main/video",
-      "historyUrl": "/api/gallery/cases/inflak-main/runs/17d5b3a920f54501b6895275dd7e572a/history",
+      "historyUrl": "/api/gallery/cases/inflak-main/runs/9c39a97ac6c44892a2f101d15714cd1b/history",
       "run": {
         "schemaVersion": "1.0",
         "caseId": "inflak-main",
-        "runId": "17d5b3a920f54501b6895275dd7e572a",
-        "sessionId": "675c04b5-94d1-4e13-874b-c68cdf578baf",
+        "runId": "9c39a97ac6c44892a2f101d15714cd1b",
+        "sessionId": "832d4a3b-a6cd-4658-8e08-cad1612a0271",
         "pluginId": "inflak-main",
         "model": "gpt-5.5",
-        "startedAt": "2026-09-01T09:57:47.865016+00:00",
-        "storagePath": "data/gallery_cases/inflak-main/17d5b3a920f54501b6895275dd7e572a",
+        "startedAt": "2026-09-09T16:10:15.011697+00:00",
+        "storagePath": "data/gallery_cases/inflak-main/9c39a97ac6c44892a2f101d15714cd1b",
         "skillTraceFile": "skill-trace.jsonl"
       },
       "features": {
-        "eventCount": 52,
-        "completedSteps": 26,
+        "eventCount": 54,
+        "completedSteps": 27,
         "layers": [
           "L1",
           "L2",
           "L3",
           "L4"
         ],
-        "interactionCount": 3,
+        "interactionCount": 4,
         "interactionPreviewRatio": 0.05,
-        "durationSeconds": 392,
+        "durationSeconds": 389,
         "tools": [
           "HTML widget renderer",
-          "generate image",
-          "restyle image"
+          "generate image"
         ]
       },
       "layerFiles": {
         "L1": [
           {
-            "name": "iai-l1-core-module",
-            "path": "plugins/inflak-main/skills/iai-l1-core-module/SKILL.md",
-            "invocations": 9
+            "name": "iai-l1-router",
+            "path": "plugins/inflak-main/skills/iai-l1-router/SKILL.md",
+            "invocations": 8
           }
         ],
         "L2": [
           {
-            "name": "iai-l2-image-edit",
-            "path": "plugins/inflak-main/skills/iai-l2-image-edit/SKILL.md",
-            "invocations": 2
-          },
-          {
             "name": "iai-l2-image-generation",
             "path": "plugins/inflak-main/skills/iai-l2-image-generation/SKILL.md",
-            "invocations": 2
+            "invocations": 3
           },
           {
             "name": "iai-l2-writing-draft",
             "path": "plugins/inflak-main/skills/iai-l2-writing-draft/SKILL.md",
-            "invocations": 2
+            "invocations": 3
           }
         ],
         "L3": [
           {
-            "name": "iai-l3-image-compare",
-            "path": "plugins/inflak-main/skills/iai-l3-image-compare/SKILL.md",
+            "name": "iai-l3-canvas-editor",
+            "path": "plugins/inflak-main/skills/iai-l3-canvas-editor/SKILL.md",
             "invocations": 1
           },
           {
-            "name": "iai-l3-structured-form",
-            "path": "plugins/inflak-main/skills/iai-l3-structured-form/SKILL.md",
+            "name": "iai-l3-option-selector",
+            "path": "plugins/inflak-main/skills/iai-l3-option-selector/SKILL.md",
+            "invocations": 1
+          },
+          {
+            "name": "iai-l3-settings-form",
+            "path": "plugins/inflak-main/skills/iai-l3-settings-form/SKILL.md",
             "invocations": 2
           }
         ],
@@ -88,27 +87,27 @@
           {
             "name": "iai-l4-widget-renderer",
             "path": "plugins/inflak-main/skills/iai-l4-widget-renderer/SKILL.md",
-            "invocations": 3
+            "invocations": 4
           }
         ]
       },
       "videoFile": "clips/inflak-main.mp4",
-      "historyFile": "inflak-main/17d5b3a920f54501b6895275dd7e572a/skill-trace.jsonl"
+      "historyFile": "inflak-main/9c39a97ac6c44892a2f101d15714cd1b/skill-trace.jsonl"
     },
     {
       "caseId": "inflak-pN1-image-prompt-iteration",
       "order": 1,
-      "title": "P1 Image Prompt Iteration",
+      "title": "P1 User-Driven Prompt Refinement",
       "focus": "Prompt refinement",
       "description": "P1 instantiates interactive prompt enhancement: the user selects and revises prompt elements through lightweight iterations before committing the instruction to image generation.",
       "kind": "paradigm",
       "coverTimeSeconds": 3,
       "artifactSubstrates": [
-        "Text"
+        "text"
       ],
       "interactionRealizations": [
-        "Text Editing",
-        "Artifact Review"
+        "selection",
+        "annotation"
       ],
       "videoUrl": "/api/gallery/cases/inflak-pN1-image-prompt-iteration/video",
       "historyUrl": "/api/gallery/cases/inflak-pN1-image-prompt-iteration/runs/ff4591def79246c5b3b44a3dab0064da/history",
@@ -120,7 +119,7 @@
         "pluginId": "inflak-pN1-image-prompt-iteration",
         "model": "gpt-5.5",
         "startedAt": "2026-08-21T08:18:52.651173+00:00",
-        "storagePath": "data/gallery_cases/inflak-pN1-image-prompt-iteration/ff4591def79246c5b3b44a3dab0064da",
+        "storagePath": "data/gallery_cases/inflak-pN1-user-driven-prompt-refinement/ff4591def79246c5b3b44a3dab0064da",
         "skillTraceFile": "skill-trace.jsonl"
       },
       "features": {
@@ -175,23 +174,23 @@
           }
         ]
       },
-      "videoFile": "clips/pN1-image-prompt-iteration.mp4",
-      "historyFile": "inflak-pN1-image-prompt-iteration/ff4591def79246c5b3b44a3dab0064da/skill-trace.jsonl"
+      "videoFile": "clips/pN1-user-driven-prompt-refinement.mp4",
+      "historyFile": "inflak-pN1-user-driven-prompt-refinement/ff4591def79246c5b3b44a3dab0064da/skill-trace.jsonl"
     },
     {
       "caseId": "inflak-pN2-input-grounded-prompt-structure",
       "order": 2,
-      "title": "P2 Input-grounded Prompt Structure",
+      "title": "P2 User-Driven Prompt Organization",
       "focus": "Prompt structuring",
       "description": "P2 instantiates prompt organization: source content is decomposed into traceable units that can be grouped, ordered, edited, and recombined into a structured instruction.",
       "kind": "paradigm",
       "coverTimeSeconds": 7,
       "artifactSubstrates": [
-        "Text"
+        "text"
       ],
       "interactionRealizations": [
-        "Structured Input",
-        "Text Editing"
+        "dragging",
+        "annotation"
       ],
       "videoUrl": "/api/gallery/cases/inflak-pN2-input-grounded-prompt-structure/video",
       "historyUrl": "/api/gallery/cases/inflak-pN2-input-grounded-prompt-structure/runs/bc22ac496dba4261a2bac425a966c207/history",
@@ -203,7 +202,7 @@
         "pluginId": "inflak-pN2-input-grounded-prompt-structure",
         "model": "gpt-5.5",
         "startedAt": "2026-08-21T09:59:25.194129+00:00",
-        "storagePath": "data/gallery_cases/inflak-pN2-input-grounded-prompt-structure/bc22ac496dba4261a2bac425a966c207",
+        "storagePath": "data/gallery_cases/inflak-pN2-user-driven-prompt-organization/bc22ac496dba4261a2bac425a966c207",
         "skillTraceFile": "skill-trace.jsonl"
       },
       "features": {
@@ -258,24 +257,23 @@
           }
         ]
       },
-      "videoFile": "clips/pN2-inputgrounded-prompt-structure.mp4",
-      "historyFile": "inflak-pN2-input-grounded-prompt-structure/bc22ac496dba4261a2bac425a966c207/skill-trace.jsonl"
+      "videoFile": "clips/pN2-user-driven-prompt-organization.mp4",
+      "historyFile": "inflak-pN2-user-driven-prompt-organization/bc22ac496dba4261a2bac425a966c207/skill-trace.jsonl"
     },
     {
       "caseId": "inflak-pN3-sketch-layout",
       "order": 3,
-      "title": "P3 Sketch-grounded Layout",
+      "title": "P3 Interaction as Part of Instruction",
       "focus": "Layout grounding",
       "description": "P3 instantiates interaction-as-instruction: a user-authored sketch communicates spatial intent that would be cumbersome to express precisely in text alone.",
       "kind": "paradigm",
       "coverTimeSeconds": 10,
       "artifactSubstrates": [
-        "Text",
-        "Sketch"
+        "text",
+        "sketches"
       ],
       "interactionRealizations": [
-        "Canvas Sketching",
-        "Artifact Review"
+        "drawing"
       ],
       "videoUrl": "/api/gallery/cases/inflak-pN3-sketch-layout/video",
       "historyUrl": "/api/gallery/cases/inflak-pN3-sketch-layout/runs/1b71ade5820442f28a97a101ef4da890/history",
@@ -287,7 +285,7 @@
         "pluginId": "inflak-pN3-sketch-layout",
         "model": "gpt-5.5",
         "startedAt": "2026-08-23T07:26:05.478383+00:00",
-        "storagePath": "data/gallery_cases/inflak-pN3-sketch-grounded-layout/1b71ade5820442f28a97a101ef4da890",
+        "storagePath": "data/gallery_cases/inflak-pN3-interaction-as-part-of-instruction/1b71ade5820442f28a97a101ef4da890",
         "skillTraceFile": "skill-trace.jsonl"
       },
       "features": {
@@ -345,23 +343,22 @@
           }
         ]
       },
-      "videoFile": "clips/pN3-sketchgrounded-layout-image-generation.mp4",
-      "historyFile": "inflak-pN3-sketch-grounded-layout/1b71ade5820442f28a97a101ef4da890/skill-trace.jsonl"
+      "videoFile": "clips/pN3-interaction-as-part-of-instruction.mp4",
+      "historyFile": "inflak-pN3-interaction-as-part-of-instruction/1b71ade5820442f28a97a101ef4da890/skill-trace.jsonl"
     },
     {
       "caseId": "inflak-pN4-image-inpainting",
       "order": 4,
-      "title": "P4 Artifact-grounded Inpainting",
+      "title": "P4 Referenced Artifact as Instruction",
       "focus": "Local image editing",
       "description": "P4 treats a referenced artifact as part of the instruction: the source image and a marked region jointly ground a localized generative edit.",
       "kind": "paradigm",
       "coverTimeSeconds": 22,
       "artifactSubstrates": [
-        "Image (Raster)"
+        "raster images"
       ],
       "interactionRealizations": [
-        "Canvas Manipulation",
-        "Artifact Review"
+        "annotation"
       ],
       "videoUrl": "/api/gallery/cases/inflak-pN4-image-inpainting/video",
       "historyUrl": "/api/gallery/cases/inflak-pN4-image-inpainting/runs/377097de5f794729ba8b70f0761878b2/history",
@@ -373,7 +370,7 @@
         "pluginId": "inflak-pN4-image-inpainting",
         "model": "gpt-5.5",
         "startedAt": "2026-08-23T07:34:41.769808+00:00",
-        "storagePath": "data/gallery_cases/inflak-pN4-artifact-grounded-inpainting/377097de5f794729ba8b70f0761878b2",
+        "storagePath": "data/gallery_cases/inflak-pN4-referenced-artifact-as-instruction/377097de5f794729ba8b70f0761878b2",
         "skillTraceFile": "skill-trace.jsonl"
       },
       "features": {
@@ -429,23 +426,22 @@
           }
         ]
       },
-      "videoFile": "clips/pN4-artifactgrounded-local-inpaint.mp4",
-      "historyFile": "inflak-pN4-artifact-grounded-inpainting/377097de5f794729ba8b70f0761878b2/skill-trace.jsonl"
+      "videoFile": "clips/pN4-referenced-artifact-as-instruction.mp4",
+      "historyFile": "inflak-pN4-referenced-artifact-as-instruction/377097de5f794729ba8b70f0761878b2/skill-trace.jsonl"
     },
     {
       "caseId": "inflak-pN5-writing-brainstorm",
       "order": 5,
-      "title": "P5 Writing Brainstorm",
+      "title": "P5 AI-Driven Prompt Suggestion",
       "focus": "Idea exploration",
       "description": "P5 instantiates AI-driven prompt suggestion: the model proposes distinct writing directions, while the user selects, combines, and refines them into an owned creative brief.",
       "kind": "paradigm",
       "coverTimeSeconds": 7,
       "artifactSubstrates": [
-        "Text"
+        "text"
       ],
       "interactionRealizations": [
-        "Conversational Selection",
-        "Artifact Review"
+        "selection"
       ],
       "videoUrl": "/api/gallery/cases/inflak-pN5-writing-brainstorm/video",
       "historyUrl": "/api/gallery/cases/inflak-pN5-writing-brainstorm/runs/e632d2294a9a4eaead6eddd20b0a97aa/history",
@@ -457,7 +453,7 @@
         "pluginId": "inflak-pN5-writing-brainstorm",
         "model": "gpt-5.5",
         "startedAt": "2026-08-24T02:31:55.626341+00:00",
-        "storagePath": "data/gallery_cases/inflak-pN5-writing-brainstorm/e632d2294a9a4eaead6eddd20b0a97aa",
+        "storagePath": "data/gallery_cases/inflak-pN5-ai-driven-prompt-suggestion/e632d2294a9a4eaead6eddd20b0a97aa",
         "skillTraceFile": "skill-trace.jsonl"
       },
       "features": {
@@ -512,23 +508,23 @@
           }
         ]
       },
-      "videoFile": "clips/pN5-writing-brainstorm.mp4",
-      "historyFile": "inflak-pN5-writing-brainstorm/e632d2294a9a4eaead6eddd20b0a97aa/skill-trace.jsonl"
+      "videoFile": "clips/pN5-ai-driven-prompt-suggestion.mp4",
+      "historyFile": "inflak-pN5-ai-driven-prompt-suggestion/e632d2294a9a4eaead6eddd20b0a97aa/skill-trace.jsonl"
     },
     {
       "caseId": "inflak-pN6",
       "order": 6,
-      "title": "P6 Story Prompt Decomposition",
+      "title": "P6 AI-Driven Prompt Decomposition",
       "focus": "Narrative planning",
       "description": "P6 instantiates AI-driven prompt decomposition: the model breaks a story prompt into editable characters, settings, events, relationships, tone, and constraints for deliberate recomposition.",
       "kind": "paradigm",
       "coverTimeSeconds": 17,
       "artifactSubstrates": [
-        "Text"
+        "text"
       ],
       "interactionRealizations": [
-        "Structured Input",
-        "Artifact Review"
+        "annotation",
+        "toggling"
       ],
       "videoUrl": "/api/gallery/cases/inflak-pN6/video",
       "historyUrl": "/api/gallery/cases/inflak-pN6/runs/d344390125b44b53a3a3048983ccd60c/history",
@@ -540,7 +536,7 @@
         "pluginId": "inflak-pN6-story-creation",
         "model": "gpt-5.5",
         "startedAt": "2026-08-24T04:30:20.655206+00:00",
-        "storagePath": "data/gallery_cases/inflak-pN6-story-prompt-decomposition/d344390125b44b53a3a3048983ccd60c",
+        "storagePath": "data/gallery_cases/inflak-pN6-ai-driven-prompt-decomposition/d344390125b44b53a3a3048983ccd60c",
         "skillTraceFile": "skill-trace.jsonl"
       },
       "features": {
@@ -595,23 +591,22 @@
           }
         ]
       },
-      "videoFile": "clips/pN6-story-prompt-decomposition.mp4",
-      "historyFile": "inflak-pN6-story-prompt-decomposition/d344390125b44b53a3a3048983ccd60c/skill-trace.jsonl"
+      "videoFile": "clips/pN6-ai-driven-prompt-decomposition.mp4",
+      "historyFile": "inflak-pN6-ai-driven-prompt-decomposition/d344390125b44b53a3a3048983ccd60c/skill-trace.jsonl"
     },
     {
       "caseId": "inflak-pN7-image-prompt-control",
       "order": 7,
-      "title": "P7 Image Prompt Control",
+      "title": "P7 Generative Prompt Control Widgets",
       "focus": "Generation control",
       "description": "P7 instantiates generative prompt control widgets: controls are generated around semantic prompt units so users can tune visual attributes without repeatedly rewriting the full prompt.",
       "kind": "paradigm",
       "coverTimeSeconds": 5,
       "artifactSubstrates": [
-        "Text"
+        "text"
       ],
       "interactionRealizations": [
-        "Structured Input",
-        "Artifact Review"
+        "toggling"
       ],
       "videoUrl": "/api/gallery/cases/inflak-pN7-image-prompt-control/video",
       "historyUrl": "/api/gallery/cases/inflak-pN7-image-prompt-control/runs/c4222bce6c2c4bb2b8675562c812e888/history",
@@ -623,7 +618,7 @@
         "pluginId": "inflak-pN7-image-prompt-control",
         "model": "gpt-5.5",
         "startedAt": "2026-08-24T05:31:31.034498+00:00",
-        "storagePath": "data/gallery_cases/inflak-pN7-image-prompt-control/c4222bce6c2c4bb2b8675562c812e888",
+        "storagePath": "data/gallery_cases/inflak-pN7-generative-prompt-control-widgets/c4222bce6c2c4bb2b8675562c812e888",
         "skillTraceFile": "skill-trace.jsonl"
       },
       "features": {
@@ -679,24 +674,24 @@
           }
         ]
       },
-      "videoFile": "clips/pN7-image-generation-prompt-control.mp4",
-      "historyFile": "inflak-pN7-image-prompt-control/c4222bce6c2c4bb2b8675562c812e888/skill-trace.jsonl"
+      "videoFile": "clips/pN7-generative-prompt-control-widgets.mp4",
+      "historyFile": "inflak-pN7-generative-prompt-control-widgets/c4222bce6c2c4bb2b8675562c812e888/skill-trace.jsonl"
     },
     {
       "caseId": "inflak-pN8",
       "order": 8,
-      "title": "P8 Generative Collage Control",
+      "title": "P8 Generative Artifact Control Widgets",
       "focus": "Spatial composition",
       "description": "P8 instantiates generative artifact control widgets: object, style, transform, layer, and text controls are created around a collage so the generated artifact can be manipulated directly.",
       "kind": "paradigm",
       "coverTimeSeconds": 16,
       "artifactSubstrates": [
-        "Vector Graphic",
-        "Spatial Composition"
+        "vector graphics"
       ],
       "interactionRealizations": [
-        "Conversational Selection",
-        "Canvas Manipulation"
+        "selection",
+        "dragging",
+        "direct manipulation"
       ],
       "videoUrl": "/api/gallery/cases/inflak-pN8/video",
       "historyUrl": "/api/gallery/cases/inflak-pN8/runs/413efa3dae9e44b4905e8f990080aa82/history",
@@ -708,7 +703,7 @@
         "pluginId": "inflak-pN8-collage-control",
         "model": "gpt-5.5",
         "startedAt": "2026-09-01T08:21:30.910496+00:00",
-        "storagePath": "data/gallery_cases/inflak-pN8-generative-collage-control/413efa3dae9e44b4905e8f990080aa82",
+        "storagePath": "data/gallery_cases/inflak-pN8-generative-artifact-control-widgets/413efa3dae9e44b4905e8f990080aa82",
         "skillTraceFile": "skill-trace.jsonl"
       },
       "features": {
@@ -781,24 +776,23 @@
           }
         ]
       },
-      "videoFile": "clips/pN8-generative-collage-control-widget.mp4",
-      "historyFile": "inflak-pN8-generative-collage-control/413efa3dae9e44b4905e8f990080aa82/skill-trace.jsonl"
+      "videoFile": "clips/pN8-generative-artifact-control-widgets.mp4",
+      "historyFile": "inflak-pN8-generative-artifact-control-widgets/413efa3dae9e44b4905e8f990080aa82/skill-trace.jsonl"
     },
     {
       "caseId": "inflak-pN9-chart-analysis-instruction",
       "order": 9,
-      "title": "P9 Chart Analysis Instruction",
+      "title": "P9 Artifact to Structured Instruction",
       "focus": "Visual analysis",
       "description": "P9 instantiates artifact-to-instruction: evidence in a chart is transformed into a grounded analysis brief that the user can scope, compose, and review.",
       "kind": "paradigm",
       "coverTimeSeconds": 20,
       "artifactSubstrates": [
-        "Data Visualization"
+        "structured data"
       ],
       "interactionRealizations": [
-        "Conversational Selection",
-        "Structured Input",
-        "Artifact Review"
+        "selection",
+        "annotation"
       ],
       "videoUrl": "/api/gallery/cases/inflak-pN9-chart-analysis-instruction/video",
       "historyUrl": "/api/gallery/cases/inflak-pN9-chart-analysis-instruction/runs/1fb3f5b9ecf7402693da26cf5f28dc30/history",
@@ -810,7 +804,7 @@
         "pluginId": "inflak-pN9-chart-analysis-instruction",
         "model": "gpt-5.5",
         "startedAt": "2026-08-25T08:07:23.710574+00:00",
-        "storagePath": "data/gallery_cases/inflak-pN9-chart-analysis-instruction/1fb3f5b9ecf7402693da26cf5f28dc30",
+        "storagePath": "data/gallery_cases/inflak-pN9-artifact-to-structured-instruction/1fb3f5b9ecf7402693da26cf5f28dc30",
         "skillTraceFile": "skill-trace.jsonl"
       },
       "features": {
@@ -877,23 +871,23 @@
           }
         ]
       },
-      "videoFile": "clips/pN9-chart-analysis-instruction.mp4",
-      "historyFile": "inflak-pN9-chart-analysis-instruction/1fb3f5b9ecf7402693da26cf5f28dc30/skill-trace.jsonl"
+      "videoFile": "clips/pN9-artifact-to-structured-instruction.mp4",
+      "historyFile": "inflak-pN9-artifact-to-structured-instruction/1fb3f5b9ecf7402693da26cf5f28dc30/skill-trace.jsonl"
     },
     {
       "caseId": "inflak-pN10-svg-refinement-instruction",
       "order": 10,
-      "title": "P10 SVG Refinement Instruction",
+      "title": "P10 Artifact to Multimodal Instruction",
       "focus": "Object-level refinement",
       "description": "P10 instantiates artifact-to-multimodal-instruction: SVG objects and their relationships become referential context for precise, structured refinement instructions.",
       "kind": "paradigm",
       "coverTimeSeconds": 13,
       "artifactSubstrates": [
-        "Vector Graphic"
+        "vector graphics"
       ],
       "interactionRealizations": [
-        "Canvas Manipulation",
-        "Artifact Review"
+        "selection",
+        "annotation"
       ],
       "videoUrl": "/api/gallery/cases/inflak-pN10-svg-refinement-instruction/video",
       "historyUrl": "/api/gallery/cases/inflak-pN10-svg-refinement-instruction/runs/096e536efe9e438f867b56d81f736853/history",
@@ -905,7 +899,7 @@
         "pluginId": "inflak-pN10-svg-refinement-instruction",
         "model": "gpt-5.5",
         "startedAt": "2026-09-01T08:08:12.447393+00:00",
-        "storagePath": "data/gallery_cases/inflak-pN10-svg-refinement-instruction/096e536efe9e438f867b56d81f736853",
+        "storagePath": "data/gallery_cases/inflak-pN10-artifact-to-multimodal-instruction/096e536efe9e438f867b56d81f736853",
         "skillTraceFile": "skill-trace.jsonl"
       },
       "features": {
@@ -978,25 +972,25 @@
           }
         ]
       },
-      "videoFile": "clips/pN10-svg-refinement-instruction.mp4",
-      "historyFile": "inflak-pN10-svg-refinement-instruction/096e536efe9e438f867b56d81f736853/skill-trace.jsonl"
+      "videoFile": "clips/pN10-artifact-to-multimodal-instruction.mp4",
+      "historyFile": "inflak-pN10-artifact-to-multimodal-instruction/096e536efe9e438f867b56d81f736853/skill-trace.jsonl"
     },
     {
       "caseId": "inflak-pN11-svg-prompt-enhancement",
       "order": 11,
-      "title": "P11 SVG Prompt Enhancement",
+      "title": "P11 Artifact-Driven Prompt Enhancement",
       "focus": "Prompt enhancement",
       "description": "P11 instantiates artifact-driven prompt enhancement: concepts in a text prompt are aligned with stable SVG objects, resolving targets and actions before execution.",
       "kind": "paradigm",
       "coverTimeSeconds": 9,
       "artifactSubstrates": [
-        "Text",
-        "Vector Graphic"
+        "text",
+        "vector graphics"
       ],
       "interactionRealizations": [
-        "Structured Input",
-        "Canvas Manipulation",
-        "Artifact Review"
+        "selection",
+        "annotation",
+        "direct manipulation"
       ],
       "videoUrl": "/api/gallery/cases/inflak-pN11-svg-prompt-enhancement/video",
       "historyUrl": "/api/gallery/cases/inflak-pN11-svg-prompt-enhancement/runs/05bfe68510d8472b9cabc88c7e9df7d3/history",
@@ -1008,7 +1002,7 @@
         "pluginId": "inflak-pN11-svg-prompt-enhancement",
         "model": "gpt-5.5",
         "startedAt": "2026-09-01T04:32:48.468819+00:00",
-        "storagePath": "data/gallery_cases/inflak-pN11-svg-prompt-enhancement/05bfe68510d8472b9cabc88c7e9df7d3",
+        "storagePath": "data/gallery_cases/inflak-pN11-artifact-driven-prompt-enhancement/05bfe68510d8472b9cabc88c7e9df7d3",
         "skillTraceFile": "skill-trace.jsonl"
       },
       "features": {
@@ -1076,23 +1070,23 @@
           }
         ]
       },
-      "videoFile": "clips/pN11-svg-prompt-enhancement.mp4",
-      "historyFile": "inflak-pN11-svg-prompt-enhancement/05bfe68510d8472b9cabc88c7e9df7d3/skill-trace.jsonl"
+      "videoFile": "clips/pN11-artifact-driven-prompt-enhancement.mp4",
+      "historyFile": "inflak-pN11-artifact-driven-prompt-enhancement/05bfe68510d8472b9cabc88c7e9df7d3/skill-trace.jsonl"
     },
     {
       "caseId": "inflak-pN12-interactive-svg-refinement",
       "order": 12,
-      "title": "P12 Interactive SVG Refinement",
+      "title": "P12 Interactive Artifact Refinement",
       "focus": "Direct manipulation",
       "description": "P12 instantiates interactive artifact refinement: direct controls preview deterministic SVG changes, and only confirmed operations become a new artifact revision.",
       "kind": "paradigm",
       "coverTimeSeconds": 3,
       "artifactSubstrates": [
-        "Vector Graphic"
+        "vector graphics"
       ],
       "interactionRealizations": [
-        "Canvas Manipulation",
-        "Artifact Review"
+        "toggling",
+        "direct manipulation"
       ],
       "videoUrl": "/api/gallery/cases/inflak-pN12-interactive-svg-refinement/video",
       "historyUrl": "/api/gallery/cases/inflak-pN12-interactive-svg-refinement/runs/0825e4a1e50a459ebed4bbacfcb6f132/history",
@@ -1104,7 +1098,7 @@
         "pluginId": "inflak-pN12-interactive-svg-refinement",
         "model": "gpt-5.5",
         "startedAt": "2026-09-01T07:09:24.475538+00:00",
-        "storagePath": "data/gallery_cases/inflak-pN12-interactive-svg-refinement/0825e4a1e50a459ebed4bbacfcb6f132",
+        "storagePath": "data/gallery_cases/inflak-pN12-interactive-artifact-refinement/0825e4a1e50a459ebed4bbacfcb6f132",
         "skillTraceFile": "skill-trace.jsonl"
       },
       "features": {
@@ -1166,25 +1160,24 @@
           }
         ]
       },
-      "videoFile": "clips/pN12-interactive-svg-refinement.mp4",
-      "historyFile": "inflak-pN12-interactive-svg-refinement/0825e4a1e50a459ebed4bbacfcb6f132/skill-trace.jsonl"
+      "videoFile": "clips/pN12-interactive-artifact-refinement.mp4",
+      "historyFile": "inflak-pN12-interactive-artifact-refinement/0825e4a1e50a459ebed4bbacfcb6f132/skill-trace.jsonl"
     },
     {
       "caseId": "inflak-pN13-proactive-intent-recommendation",
       "order": 13,
-      "title": "P13 Proactive Intent Recommendation",
+      "title": "P13 AI-Proactively-Initiated Interaction",
       "focus": "Intent discovery",
       "description": "P13 extends the IAI design space with proactive intent recommendation: the model infers plausible next goals from context, then lets the user choose or state a different intention before action.",
       "kind": "paradigm",
       "coverTimeSeconds": 6,
       "artifactSubstrates": [
-        "Image (Raster)",
-        "Vector Graphic"
+        "raster images",
+        "vector graphics"
       ],
       "interactionRealizations": [
-        "Conversational Selection",
-        "Canvas Manipulation",
-        "Artifact Review"
+        "selection",
+        "direct manipulation"
       ],
       "videoUrl": "/api/gallery/cases/inflak-pN13-proactive-intent-recommendation/video",
       "historyUrl": "/api/gallery/cases/inflak-pN13-proactive-intent-recommendation/runs/3018ba290df0483095b213bb6403445f/history",
@@ -1196,7 +1189,7 @@
         "pluginId": "inflak-pN13-proactive-intent-recommendation",
         "model": "gpt-5.5",
         "startedAt": "2026-09-01T11:33:21.525315+00:00",
-        "storagePath": "data/gallery_cases/inflak-pN13-proactive-intent-recommendation/3018ba290df0483095b213bb6403445f",
+        "storagePath": "data/gallery_cases/inflak-pN13-ai-proactively-initiated-interaction/3018ba290df0483095b213bb6403445f",
         "skillTraceFile": "skill-trace.jsonl"
       },
       "features": {
@@ -1245,8 +1238,8 @@
           }
         ]
       },
-      "videoFile": "clips/pN13-proactive-intent-recommendation).mp4",
-      "historyFile": "inflak-pN13-proactive-intent-recommendation/3018ba290df0483095b213bb6403445f/skill-trace.jsonl"
+      "videoFile": "clips/pN13-ai-proactively-initiated-interaction.mp4",
+      "historyFile": "inflak-pN13-ai-proactively-initiated-interaction/3018ba290df0483095b213bb6403445f/skill-trace.jsonl"
     },
     {
       "caseId": "inflak-svg-authoring",
@@ -1257,13 +1250,12 @@
       "kind": "authoring",
       "coverTimeSeconds": 33,
       "artifactSubstrates": [
-        "Vector Graphic",
-        "Spatial Composition"
+        "vector graphics"
       ],
       "interactionRealizations": [
-        "Conversational Selection",
-        "Canvas Manipulation",
-        "Artifact Review"
+        "selection",
+        "dragging",
+        "direct manipulation"
       ],
       "videoUrl": "/api/gallery/cases/inflak-svg-authoring/video",
       "historyUrl": "/api/gallery/cases/inflak-svg-authoring/runs/607c885f682b4c728c493b2b05a9627b/history",
@@ -1345,20 +1337,19 @@
   "count": 15,
   "facets": {
     "artifactSubstrates": [
-      "Data Visualization",
-      "Image (Raster)",
-      "Sketch",
-      "Spatial Composition",
-      "Text",
-      "Vector Graphic"
+      "text",
+      "sketches",
+      "raster images",
+      "structured data",
+      "vector graphics"
     ],
     "interactionRealizations": [
-      "Artifact Review",
-      "Canvas Manipulation",
-      "Canvas Sketching",
-      "Conversational Selection",
-      "Structured Input",
-      "Text Editing"
+      "selection",
+      "dragging",
+      "drawing",
+      "annotation",
+      "toggling",
+      "direct manipulation"
     ]
   }
 }

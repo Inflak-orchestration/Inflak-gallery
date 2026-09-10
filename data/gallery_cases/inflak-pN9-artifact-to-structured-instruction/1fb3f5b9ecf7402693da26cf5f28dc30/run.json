@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "1.0",
+  "caseId": "inflak-pN9-chart-analysis-instruction",
+  "runId": "1fb3f5b9ecf7402693da26cf5f28dc30",
+  "sessionId": "a098988a-0869-4ea7-b50d-924e2ea3f5da",
+  "pluginId": "inflak-pN9-chart-analysis-instruction",
+  "model": "gpt-5.5",
+  "startedAt": "2026-08-25T08:07:23.710574+00:00",
+  "storagePath": "data/gallery_cases/inflak-pN9-artifact-to-structured-instruction/1fb3f5b9ecf7402693da26cf5f28dc30",
+  "skillTraceFile": "skill-trace.jsonl"
+}

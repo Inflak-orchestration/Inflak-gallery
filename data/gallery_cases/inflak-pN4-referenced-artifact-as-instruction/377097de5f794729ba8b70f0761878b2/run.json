@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "1.0",
+  "caseId": "inflak-pN4-image-inpainting",
+  "runId": "377097de5f794729ba8b70f0761878b2",
+  "sessionId": "f7a95929-bd5a-491c-8e1d-8cc703aa4357",
+  "pluginId": "inflak-pN4-image-inpainting",
+  "model": "gpt-5.5",
+  "startedAt": "2026-08-23T07:34:41.769808+00:00",
+  "storagePath": "data/gallery_cases/inflak-pN4-referenced-artifact-as-instruction/377097de5f794729ba8b70f0761878b2",
+  "skillTraceFile": "skill-trace.jsonl"
+}

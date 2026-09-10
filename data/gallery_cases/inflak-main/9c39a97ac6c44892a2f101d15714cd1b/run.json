@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "1.0",
+  "caseId": "inflak-main",
+  "runId": "9c39a97ac6c44892a2f101d15714cd1b",
+  "sessionId": "832d4a3b-a6cd-4658-8e08-cad1612a0271",
+  "pluginId": "inflak-main",
+  "model": "gpt-5.5",
+  "startedAt": "2026-09-09T16:10:15.011697+00:00",
+  "storagePath": "data/gallery_cases/inflak-main/9c39a97ac6c44892a2f101d15714cd1b",
+  "skillTraceFile": "skill-trace.jsonl"
+}

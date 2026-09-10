@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "1.0",
+  "caseId": "inflak-pN13-proactive-intent-recommendation",
+  "runId": "3018ba290df0483095b213bb6403445f",
+  "sessionId": "6b7fc61e-6d75-4563-88cc-d902be116732",
+  "pluginId": "inflak-pN13-proactive-intent-recommendation",
+  "model": "gpt-5.5",
+  "startedAt": "2026-09-01T11:33:21.525315+00:00",
+  "storagePath": "data/gallery_cases/inflak-pN13-ai-proactively-initiated-interaction/3018ba290df0483095b213bb6403445f",
+  "skillTraceFile": "skill-trace.jsonl"
+}

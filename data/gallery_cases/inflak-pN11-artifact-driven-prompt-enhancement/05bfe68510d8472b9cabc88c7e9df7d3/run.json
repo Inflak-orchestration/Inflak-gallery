@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "1.0",
+  "caseId": "inflak-pN11-svg-prompt-enhancement",
+  "runId": "05bfe68510d8472b9cabc88c7e9df7d3",
+  "sessionId": "67a62bea-3757-44c6-ad99-088faea3c130",
+  "pluginId": "inflak-pN11-svg-prompt-enhancement",
+  "model": "gpt-5.5",
+  "startedAt": "2026-09-01T04:32:48.468819+00:00",
+  "storagePath": "data/gallery_cases/inflak-pN11-artifact-driven-prompt-enhancement/05bfe68510d8472b9cabc88c7e9df7d3",
+  "skillTraceFile": "skill-trace.jsonl"
+}

@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "1.0",
+  "caseId": "inflak-pN12-interactive-svg-refinement",
+  "runId": "0825e4a1e50a459ebed4bbacfcb6f132",
+  "sessionId": "2a2a15aa-4b31-4793-ba6f-628547c4e827",
+  "pluginId": "inflak-pN12-interactive-svg-refinement",
+  "model": "gpt-5.5",
+  "startedAt": "2026-09-01T07:09:24.475538+00:00",
+  "storagePath": "data/gallery_cases/inflak-pN12-interactive-artifact-refinement/0825e4a1e50a459ebed4bbacfcb6f132",
+  "skillTraceFile": "skill-trace.jsonl"
+}

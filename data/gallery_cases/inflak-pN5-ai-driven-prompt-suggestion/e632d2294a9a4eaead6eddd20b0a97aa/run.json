@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "1.0",
+  "caseId": "inflak-pN5-writing-brainstorm",
+  "runId": "e632d2294a9a4eaead6eddd20b0a97aa",
+  "sessionId": "3eeee9f9-9057-491a-87fe-68439a226f28",
+  "pluginId": "inflak-pN5-writing-brainstorm",
+  "model": "gpt-5.5",
+  "startedAt": "2026-08-24T02:31:55.626341+00:00",
+  "storagePath": "data/gallery_cases/inflak-pN5-ai-driven-prompt-suggestion/e632d2294a9a4eaead6eddd20b0a97aa",
+  "skillTraceFile": "skill-trace.jsonl"
+}
