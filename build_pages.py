@@ -34,6 +34,7 @@ def build(output_dir: Path) -> None:
         'href="/gallery/gallery.css?v=20260902"': 'href="./gallery.css?v=20260902"',
         'href="/gallery/"': 'href="./"',
         'src="/assets/inflak-logo.png"': 'src="./assets/inflak-logo.png"',
+        'href="/assets/favicon.png?v=icon"': 'href="./assets/favicon.png?v=icon"',
         'src="/gallery/gallery.js?v=20260902"': 'src="./gallery.js?v=20260902"',
     }
     for source, target in replacements.items():
