@@ -24,24 +24,31 @@ button, input { font: inherit; }
 button, a { -webkit-tap-highlight-color: transparent; }
 
 .gallery-header {
-  position: sticky;
+  position: relative;
   z-index: 10;
-  top: 0;
   display: flex;
-  min-height: 68px;
+  height: 76px;
   align-items: center;
   justify-content: space-between;
+  gap: 24px;
   border-bottom: 1px solid var(--line);
-  background: rgba(245, 243, 238, 0.94);
-  padding: 0 clamp(20px, 4vw, 64px);
-  backdrop-filter: blur(14px);
+  background: var(--paper);
+  padding: 0 48px;
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
 }
-.gallery-brand img { display: block; width: 142px; height: auto; }
-.gallery-header nav { display: flex; align-items: center; gap: 5px; }
-.gallery-header nav a { border-radius: 6px; color: var(--muted); padding: 8px 11px; font-size: 13px; font-weight: 600; text-decoration: none; }
-.gallery-header nav a:hover, .gallery-header nav a.active { background: #e8e5de; color: var(--ink); }
-.gallery-header nav .github-link { display: inline-flex; align-items: center; gap: 6px; }
-.github-link svg { width: 16px; height: 16px; }
+.gallery-brand { flex-shrink: 0; }
+.gallery-brand img { display: block; width: 132px; height: auto; }
+.gallery-header nav { display: flex; align-items: center; gap: 10px; }
+.gallery-header nav a { display: inline-flex; align-items: center; gap: 7px; border-radius: 5px; color: #626975; padding: 10px 14px; font-size: 13px; font-weight: 600; letter-spacing: 0; text-decoration: none; }
+.gallery-header nav a:hover, .gallery-header nav a[aria-current="page"] { background: #e8e5de; color: var(--ink); }
+.gallery-header nav .github-link { color: var(--ink); border-left: 1px solid var(--line); border-radius: 0; margin-left: 12px; padding-left: 23px; }
+.gallery-header nav svg { width: 15px; height: 15px; flex-shrink: 0; }
+.gallery-header .menu-toggle { display: none; width: 40px; height: 40px; flex-shrink: 0; border-radius: 5px; }
+.gallery-header .menu-toggle svg { width: 18px; height: 18px; }
+.gallery-header .menu-toggle:hover { background: #e8e5de; }
+.gallery-header a:focus-visible, .gallery-header button:focus-visible { outline: 2px solid var(--blue); outline-offset: 5px; }
+.gallery-header a, .gallery-header button { touch-action: manipulation; }
 
 main { width: min(1500px, 100%); margin: 0 auto; padding: 0 clamp(20px, 4vw, 64px) 70px; }
 .gallery-intro { display: flex; min-height: 210px; align-items: end; justify-content: space-between; gap: 30px; border-bottom: 1px solid var(--ink); padding: 56px 0 26px; }
@@ -131,6 +138,18 @@ h1 { margin: 0; font-family: "Newsreader", Georgia, serif; font-size: clamp(48px
 .hidden { display: none !important; }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; }
 
+@media (max-width: 1100px) {
+  .gallery-header { padding-inline: 32px; }
+}
+@media (max-width: 760px) {
+  .gallery-header { height: 66px; padding-inline: 22px; }
+  .gallery-brand img { width: 114px; }
+  .gallery-header .menu-toggle { display: grid; }
+  .gallery-header nav { display: none; position: absolute; left: 0; right: 0; top: 65px; padding: 16px 22px; border-bottom: 1px solid var(--line); background: var(--paper); }
+  .gallery-header nav.is-open { display: flex; flex-direction: column; align-items: stretch; gap: 5px; }
+  .gallery-header nav a { min-height: 44px; justify-content: space-between; }
+  .gallery-header nav .github-link { padding-left: 14px; margin-left: 0; border-left: 0; justify-content: flex-start; }
+}
 @media (max-width: 980px) {
   .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .dialog-content { grid-template-columns: 1fr; overflow: auto; }
@@ -138,9 +157,6 @@ h1 { margin: 0; font-family: "Newsreader", Georgia, serif; font-size: clamp(48px
   .case-evidence { overflow: visible; border-top: 1px solid var(--line); border-left: 0; }
 }
 @media (max-width: 620px) {
-  .gallery-header { min-height: 58px; }
-  .gallery-brand img { width: 118px; }
-  .gallery-header nav a:first-child { display: none; }
   .gallery-intro { min-height: 170px; align-items: start; flex-direction: column; justify-content: end; gap: 14px; padding-top: 35px; }
   h1 { font-size: 54px; }
   .gallery-toolbar { align-items: stretch; flex-direction: column; }

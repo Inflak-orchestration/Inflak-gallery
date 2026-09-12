@@ -233,6 +233,35 @@ function closeDialog() {
   elements.dialog.close();
 }
 
+const menu = document.querySelector(".menu-toggle");
+const navigation = document.querySelector("#navigation");
+
+function closeMenu() {
+  menu.setAttribute("aria-expanded", "false");
+  menu.setAttribute("aria-label", "Open navigation");
+  menu.title = "Open navigation";
+  navigation.classList.remove("is-open");
+}
+
+menu.addEventListener("click", () => {
+  const open = menu.getAttribute("aria-expanded") !== "true";
+  menu.setAttribute("aria-expanded", String(open));
+  menu.setAttribute("aria-label", open ? "Close navigation" : "Open navigation");
+  menu.title = open ? "Close navigation" : "Open navigation";
+  navigation.classList.toggle("is-open", open);
+});
+navigation.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeMenu));
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && menu.getAttribute("aria-expanded") === "true") {
+    closeMenu();
+    menu.focus();
+  }
+});
+document.addEventListener("click", (event) => {
+  if (!navigation.contains(event.target) && !menu.contains(event.target)) closeMenu();
+});
+window.lucide?.createIcons();
+
 document.querySelectorAll("[data-filter]").forEach((button) => {
   button.addEventListener("click", () => {
     state.filter = button.dataset.filter;

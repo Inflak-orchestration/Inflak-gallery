@@ -11,16 +11,21 @@
   </head>
   <body>
     <header class="gallery-header">
-      <a class="gallery-brand" href="/gallery/" aria-label="InFlak Case Gallery">
-        <img src="/assets/inflak-logo.png" alt="InFlak" />
+      <a class="gallery-brand" href="https://inflak-orchestration.github.io/" aria-label="Inflak home">
+        <img src="/assets/inflak-logo.png" alt="Inflak" width="142" height="44" />
       </a>
-      <nav aria-label="Primary navigation">
-        <a class="active" href="/gallery/" aria-current="page">Case gallery</a>
-        <a class="github-link" href="https://github.com/Inflak-orchestration/Inflak-gallery" target="_blank" rel="noopener noreferrer">
-          <i data-lucide="github" aria-hidden="true"></i>
+      <nav id="navigation" aria-label="Primary navigation">
+        <a href="https://inflak-orchestration.github.io/">Overview</a>
+        <a href="https://inflak-orchestration.github.io/#architecture">Architecture</a>
+        <a href="/gallery/" aria-current="page">Case gallery <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+        <a class="github-link" href="https://github.com/Inflak-orchestration">
+          <i data-lucide="book-open" aria-hidden="true"></i>
           <span>GitHub</span>
         </a>
       </nav>
+      <button class="icon-button menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="navigation" title="Open navigation">
+        <i data-lucide="menu" aria-hidden="true"></i>
+      </button>
     </header>
 
     <main>
