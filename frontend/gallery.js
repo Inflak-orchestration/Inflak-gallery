@@ -176,7 +176,15 @@ function renderLayerFiles(layerFiles) {
   }
 }
 
-async function openCase(item) {
+async function openCase(item, updateUrl = true) {
+  if (updateUrl) {
+    const url = new URL(window.location.href);
+    if (url.searchParams.get("case") !== item.caseId) {
+      url.searchParams.set("case", item.caseId);
+      window.history.pushState(null, "", url);
+    }
+  }
+  elements.dialog.dataset.caseId = item.caseId;
   const features = item.features || {};
   elements.dialogTitle.textContent = item.title;
   elements.dialogKicker.textContent = item.focus;
@@ -203,14 +211,17 @@ async function openCase(item) {
   try {
     await elements.dialogVideo.play();
   } catch {
+    if (!elements.dialog.open || elements.dialog.dataset.caseId !== item.caseId) return;
     elements.dialogVideo.muted = true;
     await elements.dialogVideo.play().catch(() => {});
   }
+  if (!elements.dialog.open || elements.dialog.dataset.caseId !== item.caseId) return;
   if (!item.historyUrl) return;
   try {
     const response = await fetch(item.historyUrl);
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const lines = (await response.text()).trim().split("\n").filter(Boolean);
+    if (!elements.dialog.open || elements.dialog.dataset.caseId !== item.caseId) return;
     const preview = lines.slice(0, 12).map((line) => {
       try {
         const event = JSON.parse(line);
@@ -222,16 +233,38 @@ async function openCase(item) {
     });
     elements.historyPreview.textContent = preview.join("\n") + (lines.length > preview.length ? `\n\n... ${lines.length - preview.length} more events` : "");
   } catch (error) {
+    if (!elements.dialog.open || elements.dialog.dataset.caseId !== item.caseId) return;
     elements.historyPreview.textContent = `History preview unavailable: ${error.message}`;
   }
 }
 
 function closeDialog() {
+  elements.dialog.close();
+}
+
+elements.dialog.addEventListener("close", () => {
+  if (elements.dialog.open) return;
   elements.dialogVideo.pause();
   elements.dialogVideo.removeAttribute("src");
   elements.dialogVideo.load();
-  elements.dialog.close();
+  delete elements.dialog.dataset.caseId;
+  const url = new URL(window.location.href);
+  if (url.searchParams.has("case")) {
+    url.searchParams.delete("case");
+    window.history.replaceState(null, "", url);
+  }
+});
+
+function openCaseFromUrl() {
+  const caseId = new URL(window.location.href).searchParams.get("case");
+  const item = state.cases.find((candidate) => candidate.caseId === caseId);
+  if (item) {
+    if (!elements.dialog.open || elements.dialog.dataset.caseId !== caseId) void openCase(item, false);
+  } else if (elements.dialog.open) {
+    closeDialog();
+  }
 }
+window.addEventListener("popstate", openCaseFromUrl);
 
 const menu = document.querySelector(".menu-toggle");
 const navigation = document.querySelector("#navigation");
@@ -296,6 +329,7 @@ async function loadGallery() {
     renderFacetOptions(elements.substrateFilters, data.facets?.artifactSubstrates || [], "artifactSubstrates");
     renderFacetOptions(elements.realizationFilters, data.facets?.interactionRealizations || [], "interactionRealizations");
     renderGallery();
+    openCaseFromUrl();
   } catch (error) {
     const message = document.createElement("p");
     message.className = "load-error";

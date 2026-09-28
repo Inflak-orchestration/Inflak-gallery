@@ -13,6 +13,13 @@ pip install -r requirements.txt
 
 Open <http://127.0.0.1:8012/gallery/>.
 
+Open a specific recording with `?case=<caseId>`, using the stable `caseId`
+from the catalog, for example
+<http://127.0.0.1:8012/gallery/?case=inflak-pN7-image-prompt-control>.
+The same query parameter works on GitHub Pages. Selecting a case updates the
+URL; closing it removes the parameter, and browser Back/Forward restores the
+matching view. Unknown IDs leave the gallery list visible.
+
 Set `INFLAK_GALLERY_PORT` to use another port. The website is self-contained and does not import or read files from another repository at runtime.
 
 ## GitHub Pages
