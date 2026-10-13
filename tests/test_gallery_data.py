@@ -133,7 +133,7 @@ class GalleryDataTests(unittest.TestCase):
             catalog = json.loads((output_dir / "data" / "catalog.json").read_text(encoding="utf-8"))
 
             self.assertIn('href="./gallery.css?v=20260912"', html)
-            self.assertIn('src="./assets/icon.png"', html)
+            self.assertIn('src="./assets/icon.png?v=20261013-transparent"', html)
             self.assertIn('fetch("./data/catalog.json")', javascript)
             self.assertNotIn("/api/gallery/cases", javascript)
             for item in catalog["cases"]:

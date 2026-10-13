@@ -33,8 +33,8 @@ def build(output_dir: Path) -> None:
     replacements = {
         'href="/gallery/gallery.css?v=20260912"': 'href="./gallery.css?v=20260912"',
         'href="/gallery/"': 'href="./"',
-        'src="/assets/icon.png"': 'src="./assets/icon.png"',
-        'href="/assets/favicon.png?v=20261013-icon"': 'href="./assets/favicon.png?v=20261013-icon"',
+        'src="/assets/icon.png?v=20261013-transparent"': 'src="./assets/icon.png?v=20261013-transparent"',
+        'href="/assets/favicon.png?v=20261013-transparent"': 'href="./assets/favicon.png?v=20261013-transparent"',
         'src="/gallery/gallery.js?v=20260912"': 'src="./gallery.js?v=20260912"',
     }
     for source, target in replacements.items():
