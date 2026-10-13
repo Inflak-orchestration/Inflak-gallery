@@ -79,9 +79,9 @@ async def gallery_js() -> FileResponse:
     return FileResponse(FRONTEND_DIR / "gallery.js", headers=NO_CACHE_HEADERS)
 
 
-@app.get("/assets/inflak-logo.png")
+@app.get("/assets/icon.png")
 async def logo() -> FileResponse:
-    return FileResponse(FRONTEND_DIR / "assets" / "inflak-logo.png")
+    return FileResponse(FRONTEND_DIR / "assets" / "icon.png")
 
 
 @app.get("/api/gallery/cases")

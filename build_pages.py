@@ -31,11 +31,11 @@ def build(output_dir: Path) -> None:
 
     html = (FRONTEND_DIR / "gallery.html").read_text(encoding="utf-8")
     replacements = {
-        'href="/gallery/gallery.css?v=20260902"': 'href="./gallery.css?v=20260902"',
+        'href="/gallery/gallery.css?v=20260912"': 'href="./gallery.css?v=20260912"',
         'href="/gallery/"': 'href="./"',
-        'src="/assets/inflak-logo.png"': 'src="./assets/inflak-logo.png"',
-        'href="/assets/favicon.png?v=icon"': 'href="./assets/favicon.png?v=icon"',
-        'src="/gallery/gallery.js?v=20260902"': 'src="./gallery.js?v=20260902"',
+        'src="/assets/icon.png"': 'src="./assets/icon.png"',
+        'href="/assets/favicon.png?v=20261013-icon"': 'href="./assets/favicon.png?v=20261013-icon"',
+        'src="/gallery/gallery.js?v=20260912"': 'src="./gallery.js?v=20260912"',
     }
     for source, target in replacements.items():
         html = html.replace(source, target)

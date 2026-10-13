@@ -132,8 +132,8 @@ class GalleryDataTests(unittest.TestCase):
             javascript = (output_dir / "gallery.js").read_text(encoding="utf-8")
             catalog = json.loads((output_dir / "data" / "catalog.json").read_text(encoding="utf-8"))
 
-            self.assertIn('href="./gallery.css?v=20260902"', html)
-            self.assertIn('src="./assets/inflak-logo.png"', html)
+            self.assertIn('href="./gallery.css?v=20260912"', html)
+            self.assertIn('src="./assets/icon.png"', html)
             self.assertIn('fetch("./data/catalog.json")', javascript)
             self.assertNotIn("/api/gallery/cases", javascript)
             for item in catalog["cases"]:

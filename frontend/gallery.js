@@ -6,6 +6,8 @@ const state = {
   interactionRealizations: new Set(),
 };
 
+const caseCards = new Map();
+
 const elements = {
   grid: document.querySelector("#gallery-grid"),
   empty: document.querySelector("#gallery-empty"),
@@ -90,34 +92,46 @@ function showInteractionFrame(video, seconds, fallbackRatio) {
   else video.addEventListener("loadedmetadata", seekToInteraction, { once: true });
 }
 
+function createCaseCard(item) {
+  const card = elements.template.content.firstElementChild.cloneNode(true);
+  const button = card.querySelector(".case-open");
+  const video = card.querySelector("video");
+  video.src = item.videoUrl || "";
+  showInteractionFrame(video, item.coverTimeSeconds, item.features?.interactionPreviewRatio);
+  card.querySelector(".case-index").textContent = item.kind === "paradigm" ? item.title.split(" ")[0] : item.kind;
+  card.querySelector(".case-kind").textContent = item.kind === "paradigm" ? "Interaction paradigm" : item.kind;
+  card.querySelector("h2").textContent = item.title;
+  card.querySelector(".case-focus").textContent = item.focus;
+  const tags = card.querySelector(".case-tags");
+  for (const substrate of item.artifactSubstrates || []) appendTag(tags, substrate, "substrate");
+  for (const realization of item.interactionRealizations || []) appendTag(tags, realization, "realization");
+  const features = item.features || {};
+  card.querySelector(".case-stats").textContent = `${features.completedSteps || 0} steps  /  ${formatDuration(features.durationSeconds)}`;
+  button.addEventListener("click", () => openCase(item));
+  return card;
+}
+
 function renderGallery() {
+  if (caseCards.size === 0) {
+    for (const item of state.cases) {
+      const card = createCaseCard(item);
+      caseCards.set(item.caseId, card);
+      elements.grid.append(card);
+    }
+    window.lucide?.createIcons();
+  }
+
   const cases = visibleCases();
-  elements.grid.replaceChildren();
+  const visibleCaseIds = new Set(cases.map((item) => item.caseId));
+  for (const [caseId, card] of caseCards) {
+    card.classList.toggle("hidden", !visibleCaseIds.has(caseId));
+  }
   elements.empty.classList.toggle("hidden", cases.length > 0);
   elements.resultCount.textContent = `${cases.length} ${cases.length === 1 ? "case" : "cases"}`;
   elements.clearTaxonomyFilters.classList.toggle(
     "hidden",
     state.artifactSubstrates.size === 0 && state.interactionRealizations.size === 0,
   );
-  for (const item of cases) {
-    const card = elements.template.content.firstElementChild.cloneNode(true);
-    const button = card.querySelector(".case-open");
-    const video = card.querySelector("video");
-    video.src = item.videoUrl || "";
-    showInteractionFrame(video, item.coverTimeSeconds, item.features?.interactionPreviewRatio);
-    card.querySelector(".case-index").textContent = item.kind === "paradigm" ? item.title.split(" ")[0] : item.kind;
-    card.querySelector(".case-kind").textContent = item.kind === "paradigm" ? "Interaction paradigm" : item.kind;
-    card.querySelector("h2").textContent = item.title;
-    card.querySelector(".case-focus").textContent = item.focus;
-    const tags = card.querySelector(".case-tags");
-    for (const substrate of item.artifactSubstrates || []) appendTag(tags, substrate, "substrate");
-    for (const realization of item.interactionRealizations || []) appendTag(tags, realization, "realization");
-    const features = item.features || {};
-    card.querySelector(".case-stats").textContent = `${features.completedSteps || 0} steps  /  ${formatDuration(features.durationSeconds)}`;
-    button.addEventListener("click", () => openCase(item));
-    elements.grid.append(card);
-  }
-  window.lucide?.createIcons();
 }
 
 function addFeature(label, value) {
